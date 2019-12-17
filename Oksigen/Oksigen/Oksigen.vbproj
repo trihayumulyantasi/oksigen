@@ -70,10 +70,17 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="rifkaalfauziyah.Designer.vb">
       <DependentUpon>rifkaalfauziyah.vb</DependentUpon>
     </Compile>
     <Compile Include="rifkaalfauziyah.vb">
+=======
+    <Compile Include="Dina.Designer.vb">
+      <DependentUpon>Dina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dina.vb">
+>>>>>>> eb3100a9bf1617e1a61565341e6a6ab102530af1
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Trihayu.vb">
