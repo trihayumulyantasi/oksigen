@@ -69,6 +69,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="rifkaalfauziyah.Designer.vb">
+      <DependentUpon>rifkaalfauziyah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rifkaalfauziyah.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Trihayu.vb">
       <SubType>Form</SubType>
     </Compile>

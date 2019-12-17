@@ -1,0 +1,9 @@
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\bin\Debug\Oksigen.exe
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\bin\Debug\Oksigen.pdb
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\bin\Debug\Oksigen.xml
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.Resources.resources
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.Trihayu.resources
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.vbproj.GenerateResource.Cache
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.exe
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.xml
+F:\Rifka_Ti-18\Oracle\oksigen\Oksigen\Oksigen\obj\Debug\Oksigen.pdb
