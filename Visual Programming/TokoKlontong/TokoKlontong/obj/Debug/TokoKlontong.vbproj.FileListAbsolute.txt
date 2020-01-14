@@ -1,0 +1,10 @@
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.exe.config
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.frmSupplier.resources
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Resources.resources
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.vbproj.GenerateResource.Cache
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.exe
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.pdb
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.xml
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.exe
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.xml
+c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.pdb
