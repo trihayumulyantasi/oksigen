@@ -35,10 +35,10 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(41, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(322, 18)
+        Me.Label1.Size = New System.Drawing.Size(308, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SILAHKAN LOGIN TERLEBIH DAHULLU"
         '
@@ -71,6 +71,7 @@ Partial Class Login
         '
         Me.tbpassword.Location = New System.Drawing.Point(147, 103)
         Me.tbpassword.Name = "tbpassword"
+        Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbpassword.Size = New System.Drawing.Size(216, 20)
         Me.tbpassword.TabIndex = 4
         '

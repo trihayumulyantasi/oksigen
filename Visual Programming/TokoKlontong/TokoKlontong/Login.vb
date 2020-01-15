@@ -23,7 +23,7 @@ Public Class Login
 
             If MySQLReader.HasRows Then
                 MessageBox.Show("Selamat Anda Berhasil Login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                frmSupplier.Show()
+                MenuUtama.Show()
                 Me.Hide()
             Else
                 'agar dapat mengulang ketika salah memasukkan username dan password
