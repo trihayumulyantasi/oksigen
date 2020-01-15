@@ -5,6 +5,7 @@ Module Koneksi
     Public MySQLReader As MySqlDataReader
     Public CMD As New MySqlCommand
     Public DA As New MySqlDataAdapter
+    Public str As String
 
 
     Public Sub KoneksiBuka()

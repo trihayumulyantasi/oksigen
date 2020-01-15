@@ -29,6 +29,7 @@ Partial Class Login
         Me.tbpassword = New System.Windows.Forms.TextBox()
         Me.btlogin = New System.Windows.Forms.Button()
         Me.btbatal = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,7 +76,7 @@ Partial Class Login
         '
         'btlogin
         '
-        Me.btlogin.Location = New System.Drawing.Point(288, 154)
+        Me.btlogin.Location = New System.Drawing.Point(288, 177)
         Me.btlogin.Name = "btlogin"
         Me.btlogin.Size = New System.Drawing.Size(75, 23)
         Me.btlogin.TabIndex = 5
@@ -84,18 +85,30 @@ Partial Class Login
         '
         'btbatal
         '
-        Me.btbatal.Location = New System.Drawing.Point(135, 154)
+        Me.btbatal.Location = New System.Drawing.Point(147, 177)
         Me.btbatal.Name = "btbatal"
         Me.btbatal.Size = New System.Drawing.Size(75, 23)
         Me.btbatal.TabIndex = 6
         Me.btbatal.Text = "&Batal"
         Me.btbatal.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Gadugi", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(147, 138)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(146, 20)
+        Me.CheckBox1.TabIndex = 30
+        Me.CheckBox1.Text = "Tampilkan Password"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 230)
+        Me.ClientSize = New System.Drawing.Size(407, 230)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btbatal)
         Me.Controls.Add(Me.btlogin)
         Me.Controls.Add(Me.tbpassword)
@@ -116,4 +129,5 @@ Partial Class Login
     Friend WithEvents tbpassword As System.Windows.Forms.TextBox
     Friend WithEvents btlogin As System.Windows.Forms.Button
     Friend WithEvents btbatal As System.Windows.Forms.Button
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class
