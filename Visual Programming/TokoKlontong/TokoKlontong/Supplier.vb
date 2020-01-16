@@ -34,7 +34,12 @@ Public Class frmSupplier
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call KoneksiBuka()
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+
+        CMD = New MySqlCommand(str, conn)
+        CMD.ExecuteNonQuery()
+
         tampildata()
 
         statusInput(False, False, False, False)
@@ -56,6 +61,8 @@ Public Class frmSupplier
 
 
     Private Sub bttambah_Click(sender As Object, e As EventArgs) Handles bttambah.Click
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
         If bttambah.Text = "&Tambah" Then
             statusInput(True, True, True, True)
             statustombol(True, False, True)
@@ -92,7 +99,7 @@ Public Class frmSupplier
                 tampildata()
             Catch ex As Exception
                 MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
-               
+
             End Try
             bttambah.Text = "&Tambah"
             statusInput(False, False, False, False)
@@ -104,6 +111,8 @@ Public Class frmSupplier
     End Sub
 
     Private Sub btdelete_Click(sender As Object, e As EventArgs) Handles btdelete.Click
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
         If btdelete.Text = "&Hapus" Then
             Dim yakinhapus As MsgBoxResult = MessageBox.Show("Yakin mau dihapus", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If yakinhapus = vbYes Then
@@ -150,7 +159,8 @@ Public Class frmSupplier
     End Sub
 
     Private Sub btedit_Click(sender As Object, e As EventArgs) Handles btedit.Click
-
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
         If btedit.Text = "&Edit" Then
             statustombol(False, True, False)
             btedit.Text = "&Simpan"
