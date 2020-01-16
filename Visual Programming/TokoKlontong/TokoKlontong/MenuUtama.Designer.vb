@@ -23,6 +23,7 @@ Partial Class MenuUtama
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btsupplier = New System.Windows.Forms.Button()
+        Me.btbarang = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btsupplier
@@ -34,11 +35,21 @@ Partial Class MenuUtama
         Me.btsupplier.Text = "&Supplier"
         Me.btsupplier.UseVisualStyleBackColor = True
         '
+        'btbarang
+        '
+        Me.btbarang.Location = New System.Drawing.Point(287, 136)
+        Me.btbarang.Name = "btbarang"
+        Me.btbarang.Size = New System.Drawing.Size(75, 23)
+        Me.btbarang.TabIndex = 1
+        Me.btbarang.Text = "&Barang"
+        Me.btbarang.UseVisualStyleBackColor = True
+        '
         'MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(438, 261)
+        Me.Controls.Add(Me.btbarang)
         Me.Controls.Add(Me.btsupplier)
         Me.Name = "MenuUtama"
         Me.Text = "MenuUtama"
@@ -46,4 +57,5 @@ Partial Class MenuUtama
 
     End Sub
     Friend WithEvents btsupplier As System.Windows.Forms.Button
+    Friend WithEvents btbarang As System.Windows.Forms.Button
 End Class
