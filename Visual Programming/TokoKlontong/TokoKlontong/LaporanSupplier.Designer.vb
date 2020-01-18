@@ -199,6 +199,7 @@ Partial Class LaporanSupplier
         '
         'datalaporansupplier
         '
+        Me.datalaporansupplier.AllowUserToAddRows = False
         Me.datalaporansupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datalaporansupplier.Location = New System.Drawing.Point(12, 264)
         Me.datalaporansupplier.Name = "datalaporansupplier"

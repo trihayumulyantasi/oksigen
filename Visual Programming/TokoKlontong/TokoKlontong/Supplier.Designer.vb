@@ -134,6 +134,7 @@ Partial Class frmSupplier
         '
         'datasupplier
         '
+        Me.datasupplier.AllowUserToAddRows = False
         Me.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datasupplier.Location = New System.Drawing.Point(10, 177)
         Me.datasupplier.Name = "datasupplier"

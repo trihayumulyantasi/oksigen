@@ -136,6 +136,7 @@ Partial Class admin
         '
         'dataadmin
         '
+        Me.dataadmin.AllowUserToAddRows = False
         Me.dataadmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataadmin.Location = New System.Drawing.Point(12, 224)
         Me.dataadmin.Name = "dataadmin"

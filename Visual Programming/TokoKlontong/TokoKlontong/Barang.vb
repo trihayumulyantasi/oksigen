@@ -4,8 +4,11 @@ Public Class Barang
     Private Sub statuspembersih()
         tbidbarang.Text = ""
         tbnamabarang.Text = ""
-        tbharga.Text = ""
+        tbhargajual.Text = ""
+        tbhargasupplier.Text = ""
         tbstock.Text = ""
+        cbidsupplier.Text = ""
+        cbidadmin.Text = ""
     End Sub
 
     Private Sub tampildata()
@@ -14,7 +17,7 @@ Public Class Barang
         Dim query As String
         Dim data As Integer
 
-        query = "select id_barang, nama_barang, harga, stock, id_supplier from barang"
+        query = "select id_barang, nama_barang, harga_jual, harga_supplier, stock, id_supplier, waktu_input, id_admin from barang"
         adapter = New MySqlDataAdapter(query, conn)
         dt = New DataTable
         data = adapter.Fill(dt)
@@ -24,21 +27,27 @@ Public Class Barang
             databarang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
             databarang.Columns(0).HeaderText = "Id Barang"
             databarang.Columns(1).HeaderText = "Nama Barang"
-            databarang.Columns(2).HeaderText = "Harga"
-            databarang.Columns(3).HeaderText = "Stock"
-            databarang.Columns(3).HeaderText = "ID Supplier"
+            databarang.Columns(2).HeaderText = "Harga Jual"
+            databarang.Columns(3).HeaderText = "Harga Supplier"
+            databarang.Columns(4).HeaderText = "Stock"
+            databarang.Columns(5).HeaderText = "ID Supplier"
+            databarang.Columns(6).HeaderText = "Waktu Input"
+            databarang.Columns(7).HeaderText = "ID Admin"
 
         Else
             databarang.DataSource = Nothing
         End If
     End Sub
 
-    Private Sub statusInput(idbarang As Boolean, namabarang As Boolean, harga As Boolean, stock As Boolean, idsupplier As Boolean)
+    Private Sub statusInput(idbarang As Boolean, namabarang As Boolean, jual As Boolean, hargasup As Boolean, stock As Boolean, idsupplier As Boolean, waktu As Boolean, adm As Boolean)
         tbidbarang.Enabled = idbarang
         tbnamabarang.Enabled = namabarang
-        tbharga.Enabled = harga
+        tbhargajual.Enabled = jual
+        tbhargasupplier.Enabled = hargasup
         tbstock.Enabled = stock
         cbidsupplier.Enabled = idsupplier
+        tglinput.Enabled = waktu
+        cbidadmin.Enabled = adm
     End Sub
 
     Private Sub statustombol(tambah As Boolean, edit As Boolean, hapus As Boolean)
@@ -48,6 +57,8 @@ Public Class Barang
     End Sub
 
     Sub tampilcomboidsupplier()
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
         CMD.Connection = conn
         Dim str As String
         str = "Select id_supplier from supplier"
@@ -60,6 +71,21 @@ Public Class Barang
             Loop
         End If
     End Sub
+    Sub tampilcomboidadmin()
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+        CMD.Connection = conn
+        Dim str As String
+        str = "Select id_admin from admin"
+        CMD = New MySqlCommand(str, conn)
+
+        MySQLReader = CMD.ExecuteReader
+        If MySQLReader.HasRows Then
+            Do While MySQLReader.Read
+                cbidadmin.Items.Add(MySQLReader("id_admin"))
+            Loop
+        End If
+    End Sub
     Private Sub Barang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If (conn.State) <> ConnectionState.Closed Then conn.Close()
         KoneksiBuka()
@@ -69,16 +95,17 @@ Public Class Barang
 
         tampildata()
 
-        statusInput(False, False, False, False, False)
+        statusInput(False, False, False, False, False, False, False, False)
         statustombol(True, False, False)
         tampilcomboidsupplier()
+        tampilcomboidadmin()
     End Sub
 
     Private Sub bttambah_Click(sender As Object, e As EventArgs) Handles bttambah.Click
         If (conn.State) <> ConnectionState.Closed Then conn.Close()
         KoneksiBuka()
         If bttambah.Text = "&Tambah" Then
-            statusInput(True, True, True, True, True)
+            statusInput(True, True, True, True, True, True, True, True)
             statustombol(True, False, True)
             bthapus.Text = "Batal"
             bttambah.Text = "Simpan"
@@ -91,9 +118,13 @@ Public Class Barang
                 MsgBox("Nama Barang Harus diisi", MsgBoxStyle.Information, "Informasi")
                 tbnamabarang.Focus()
                 Exit Sub
-            ElseIf tbharga.Text = "" Then
-                MsgBox("Harga harus diisi", MsgBoxStyle.Information, "Informasi")
-                tbharga.Focus()
+            ElseIf tbhargajual.Text = "" Then
+                MsgBox("Harga Jual harus diisi", MsgBoxStyle.Information, "Informasi")
+                tbhargajual.Focus()
+                Exit Sub
+            ElseIf tbhargasupplier.Text = "" Then
+                MsgBox("Harga Supplier harus diisi", MsgBoxStyle.Information, "Informasi")
+                tbhargasupplier.Focus()
                 Exit Sub
             ElseIf tbstock.Text = "" Then
                 MsgBox("Stock Harus Diisi", MsgBoxStyle.Information, "Informasi")
@@ -103,13 +134,17 @@ Public Class Barang
                 MsgBox("ID Supplier Harus Diisi", MsgBoxStyle.Information, "Informasi")
                 cbidsupplier.Focus()
                 Exit Sub
+            ElseIf cbidadmin.Text = "" Then
+                MsgBox("ID Admin harus diisi", MsgBoxStyle.Information, "Informasi")
+                cbidadmin.Focus()
+                Exit Sub
             End If
             'conn.Open()
             Try
                 Dim qinsert As String
                 CMD.CommandType = CommandType.Text
-                qinsert = "insert into barang(id_barang, nama_barang, harga, stock, id_supplier)"
-                qinsert = qinsert & "values('" & tbidbarang.Text & "', '" & tbnamabarang.Text & "', '" & tbharga.Text & "', '" & tbstock.Text & "', '" & cbidsupplier.Text & "')"
+                qinsert = "insert into barang(id_barang, nama_barang, harga_jual, harga_supplier, stock, id_supplier, waktu_input, id_admin)"
+                qinsert = qinsert & "values('" & tbidbarang.Text & "', '" & tbnamabarang.Text & "', '" & tbhargajual.Text & "', '" & tbhargasupplier.Text & "', '" & tbstock.Text & "', '" & cbidsupplier.Text & "', '" & tglinput.Value.ToString("yyyy-MM-dd") & "', '" & cbidadmin.Text & "')"
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qinsert
                 CMD.Connection = conn
@@ -121,7 +156,7 @@ Public Class Barang
 
             End Try
             bttambah.Text = "&Tambah"
-            statusInput(False, False, False, False, False)
+            statusInput(False, False, False, False, False, False, False, False)
             statustombol(True, False, False)
             statuspembersih()
         End If
@@ -135,11 +170,11 @@ Public Class Barang
         If btedit.Text = "&Edit" Then
             statustombol(False, True, False)
             btedit.Text = "&Simpan"
-            statusInput(False, True, True, True, True)
+            statusInput(False, True, True, True, True, True, True, True)
         ElseIf btedit.Text = "&Simpan" Then
             Try
                 Dim qUpdate As String
-                qUpdate = "update barang set nama_barang='" & tbnamabarang.Text & "', harga='" & tbharga.Text & "', stock='" & tbstock.Text & "', id_supplier='" & cbidsupplier.Text & "' where id_barang='" & tbidbarang.Text & "'"
+                qUpdate = "update barang set nama_barang='" & tbnamabarang.Text & "', harga_jual='" & tbhargajual.Text & "', harga_supplier='" & tbhargajual.Text & "', stock='" & tbstock.Text & "', id_supplier='" & cbidsupplier.Text & "', waktu_input='" & tglinput.Value.ToString("yyyy-MM-dd") & "', id_admin='" & cbidadmin.Text & "' where id_barang='" & tbidbarang.Text & "'"
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qUpdate
                 CMD.Connection = conn
@@ -152,7 +187,7 @@ Public Class Barang
             Catch ex As Exception
                 MsgBox("Gagal update Data " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
             End Try
-            statusInput(False, False, False, False, False)
+            statusInput(False, False, False, False, False, False, False, False)
             statustombol(True, False, False)
             statuspembersih()
         End If
@@ -185,7 +220,7 @@ Public Class Barang
         If bthapus.Text = "Batal" Then
             bthapus.Text = "&Hapus"
             bttambah.Text = "&Tambah"
-            statusInput(False, False, False, False, False)
+            statusInput(False, False, False, False, False, False, False, False)
             statustombol(True, False, False)
             statuspembersih()
         End If
@@ -197,14 +232,17 @@ Public Class Barang
         With databarang.Rows.Item(i)
             tbidbarang.Text = .Cells(0).Value
             tbnamabarang.Text = .Cells(1).Value
-            tbharga.Text = .Cells(2).Value
-            tbstock.Text = .Cells(3).Value
-            cbidsupplier.Text = .Cells(4).Value
+            tbhargajual.Text = .Cells(2).Value
+            tbhargasupplier.Text = .Cells(3).Value
+            tbstock.Text = .Cells(4).Value
+            cbidsupplier.Text = .Cells(5).Value
+            tglinput.Text = .Cells(6).Value
+            cbidadmin.Text = .Cells(7).Value
 
         End With
         statustombol(True, True, True)
         bthapus.Text = "&Hapus"
         ''bttambah.Text = "Batal"
-        statusInput(False, False, False, False, False)
+        statusInput(False, False, False, False, False, False, False, False)
     End Sub
 End Class
