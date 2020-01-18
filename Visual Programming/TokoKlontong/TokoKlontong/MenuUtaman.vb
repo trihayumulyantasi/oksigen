@@ -46,4 +46,15 @@ Public Class MenuUtaman
     'AllowTransparency = Enabled
     ' Me.SendToBack.Enabled()
     'End Sub
+
+    Private Sub LaporanSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanSupplierToolStripMenuItem.Click
+        Dim formCollection = System.Windows.Forms.Application.OpenForms
+        If formCollection.OfType(Of LaporanSupplier).Any Then
+
+        Else
+            Dim laporansupplier As New LaporanSupplier
+            laporansupplier.Show()
+            laporansupplier.MdiParent = Me
+        End If
+    End Sub
 End Class

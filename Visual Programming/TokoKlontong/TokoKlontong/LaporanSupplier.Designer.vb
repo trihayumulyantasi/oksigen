@@ -40,8 +40,8 @@ Partial Class LaporanSupplier
         Me.bttambah = New System.Windows.Forms.Button()
         Me.btedit = New System.Windows.Forms.Button()
         Me.bthapus = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.datalaporansupplier = New System.Windows.Forms.DataGridView()
+        CType(Me.datalaporansupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -197,20 +197,20 @@ Partial Class LaporanSupplier
         Me.bthapus.Text = "&Hapus"
         Me.bthapus.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'datalaporansupplier
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 264)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(521, 150)
-        Me.DataGridView1.TabIndex = 19
+        Me.datalaporansupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datalaporansupplier.Location = New System.Drawing.Point(12, 264)
+        Me.datalaporansupplier.Name = "datalaporansupplier"
+        Me.datalaporansupplier.Size = New System.Drawing.Size(521, 150)
+        Me.datalaporansupplier.TabIndex = 19
         '
         'LaporanSupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(548, 430)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.datalaporansupplier)
         Me.Controls.Add(Me.bthapus)
         Me.Controls.Add(Me.btedit)
         Me.Controls.Add(Me.bttambah)
@@ -231,7 +231,7 @@ Partial Class LaporanSupplier
         Me.Controls.Add(Me.Label1)
         Me.Name = "LaporanSupplier"
         Me.Text = "LaporanSupplier"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.datalaporansupplier, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,5 +254,5 @@ Partial Class LaporanSupplier
     Friend WithEvents bttambah As System.Windows.Forms.Button
     Friend WithEvents btedit As System.Windows.Forms.Button
     Friend WithEvents bthapus As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents datalaporansupplier As System.Windows.Forms.DataGridView
 End Class
