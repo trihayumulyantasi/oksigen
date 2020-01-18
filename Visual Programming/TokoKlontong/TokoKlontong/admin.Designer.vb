@@ -40,6 +40,7 @@ Partial Class admin
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbjk = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dataadmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -121,6 +122,7 @@ Partial Class admin
         '
         'tbalamat
         '
+        Me.tbalamat.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.tbalamat.Location = New System.Drawing.Point(102, 84)
         Me.tbalamat.Multiline = True
         Me.tbalamat.Name = "tbalamat"
@@ -145,27 +147,27 @@ Partial Class admin
         '
         'btdelete
         '
-        Me.btdelete.Location = New System.Drawing.Point(496, 113)
+        Me.btdelete.Location = New System.Drawing.Point(401, 106)
         Me.btdelete.Name = "btdelete"
-        Me.btdelete.Size = New System.Drawing.Size(75, 44)
+        Me.btdelete.Size = New System.Drawing.Size(158, 44)
         Me.btdelete.TabIndex = 14
         Me.btdelete.Text = "&Delete"
         Me.btdelete.UseVisualStyleBackColor = True
         '
         'btedit
         '
-        Me.btedit.Location = New System.Drawing.Point(449, 172)
+        Me.btedit.Location = New System.Drawing.Point(401, 158)
         Me.btedit.Name = "btedit"
-        Me.btedit.Size = New System.Drawing.Size(75, 44)
+        Me.btedit.Size = New System.Drawing.Size(158, 44)
         Me.btedit.TabIndex = 15
         Me.btedit.Text = "&Edit"
         Me.btedit.UseVisualStyleBackColor = True
         '
         'bttambah
         '
-        Me.bttambah.Location = New System.Drawing.Point(400, 113)
+        Me.bttambah.Location = New System.Drawing.Point(401, 55)
         Me.bttambah.Name = "bttambah"
-        Me.bttambah.Size = New System.Drawing.Size(75, 45)
+        Me.bttambah.Size = New System.Drawing.Size(158, 45)
         Me.bttambah.TabIndex = 16
         Me.bttambah.Text = "&Tambah"
         Me.bttambah.UseVisualStyleBackColor = True
@@ -209,11 +211,24 @@ Partial Class admin
         Me.cbjk.TabIndex = 19
         Me.cbjk.Text = "----- Pilih -----"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(520, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 28)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "x close"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(589, 413)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cbjk)
         Me.Controls.Add(Me.tbjabatan)
         Me.Controls.Add(Me.btdelete)
@@ -257,4 +272,5 @@ Partial Class admin
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents cbjk As System.Windows.Forms.ComboBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
