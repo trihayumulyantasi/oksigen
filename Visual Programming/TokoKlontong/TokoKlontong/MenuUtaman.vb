@@ -57,4 +57,26 @@ Public Class MenuUtaman
             laporansupplier.MdiParent = Me
         End If
     End Sub
+
+    Private Sub PanduanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PanduanToolStripMenuItem.Click
+        Dim formCollection = System.Windows.Forms.Application.OpenForms
+        If formCollection.OfType(Of panduan).Any Then
+
+        Else
+            Dim panduan As New panduan
+            panduan.Show()
+            panduan.MdiParent = Me
+        End If
+    End Sub
+
+    Private Sub TentangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TentangToolStripMenuItem.Click
+        Dim formCollection = System.Windows.Forms.Application.OpenForms
+        If formCollection.OfType(Of Tentang).Any Then
+
+        Else
+            Dim Tentang As New Tentang
+            Tentang.Show()
+            Tentang.MdiParent = Me
+        End If
+    End Sub
 End Class

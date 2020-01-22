@@ -71,7 +71,7 @@ Partial Class MenuUtaman
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "&Logout"
         '
         'EditMenu
@@ -124,24 +124,24 @@ Partial Class MenuUtaman
         '
         Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransaksiToolStripMenuItem1, Me.ToolStripMenuItem4, Me.ClosingToolStripMenuItem})
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.TransaksiToolStripMenuItem.Text = "&Transaksi"
         '
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.TransaksiToolStripMenuItem1.Text = "&Transaksi"
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(118, 6)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(149, 6)
         '
         'ClosingToolStripMenuItem
         '
         Me.ClosingToolStripMenuItem.Name = "ClosingToolStripMenuItem"
-        Me.ClosingToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ClosingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClosingToolStripMenuItem.Text = "&Closing"
         '
         'LaporanToolStripMenuItem
@@ -178,18 +178,18 @@ Partial Class MenuUtaman
         'PanduanToolStripMenuItem
         '
         Me.PanduanToolStripMenuItem.Name = "PanduanToolStripMenuItem"
-        Me.PanduanToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.PanduanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PanduanToolStripMenuItem.Text = "&Panduan"
         '
         'ToolStripMenuItem6
         '
         Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(118, 6)
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(149, 6)
         '
         'TentangToolStripMenuItem
         '
         Me.TentangToolStripMenuItem.Name = "TentangToolStripMenuItem"
-        Me.TentangToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.TentangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TentangToolStripMenuItem.Text = "&Tentang"
         '
         'MenuUtaman
