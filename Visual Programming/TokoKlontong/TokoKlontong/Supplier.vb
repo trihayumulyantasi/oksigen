@@ -154,6 +154,7 @@ Public Class frmSupplier
         End With
         statustombol(True, True, True)
         btdelete.Text = "&Hapus"
+        bttambah.Enabled = False
         ''bttambah.Text = "Batal"
         statusInput(False, False, False, False)
     End Sub
@@ -184,6 +185,14 @@ Public Class frmSupplier
             statusInput(False, False, False, False)
             statustombol(True, False, False)
             statuspembersih()
+        End If
+    End Sub
+
+    Private Sub btlogout_Click(sender As Object, e As EventArgs) Handles btlogout.Click
+        Dim result As Integer = MessageBox.Show("Anda yakin akan keluar?", "Peringatan", MessageBoxButtons.YesNo)
+
+        If result = DialogResult.Yes Then
+            Me.Close()
         End If
     End Sub
 End Class
