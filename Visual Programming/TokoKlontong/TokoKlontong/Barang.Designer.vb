@@ -43,6 +43,7 @@ Partial Class Barang
         Me.lbidadmin = New System.Windows.Forms.Label()
         Me.tglinput = New System.Windows.Forms.DateTimePicker()
         Me.cbidadmin = New System.Windows.Forms.ComboBox()
+        Me.btlogout = New System.Windows.Forms.Button()
         CType(Me.databarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -222,11 +223,21 @@ Partial Class Barang
         Me.cbidadmin.Size = New System.Drawing.Size(206, 21)
         Me.cbidadmin.TabIndex = 20
         '
+        'btlogout
+        '
+        Me.btlogout.Location = New System.Drawing.Point(406, 309)
+        Me.btlogout.Name = "btlogout"
+        Me.btlogout.Size = New System.Drawing.Size(75, 23)
+        Me.btlogout.TabIndex = 21
+        Me.btlogout.Text = "LogOut Here"
+        Me.btlogout.UseVisualStyleBackColor = True
+        '
         'Barang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 508)
+        Me.Controls.Add(Me.btlogout)
         Me.Controls.Add(Me.cbidadmin)
         Me.Controls.Add(Me.tglinput)
         Me.Controls.Add(Me.lbidadmin)
@@ -276,4 +287,5 @@ Partial Class Barang
     Friend WithEvents lbidadmin As System.Windows.Forms.Label
     Friend WithEvents tglinput As System.Windows.Forms.DateTimePicker
     Friend WithEvents cbidadmin As System.Windows.Forms.ComboBox
+    Friend WithEvents btlogout As System.Windows.Forms.Button
 End Class
