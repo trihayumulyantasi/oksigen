@@ -8,3 +8,20 @@ c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\bi
 c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.exe
 c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.xml
 c:\users\dina\documents\visual studio 2013\Projects\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.pdb
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.exe.config
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.exe
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.xml
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.pdb
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.admin.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Barang.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.LaporanSupplier.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Login.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.MenuUtaman.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.panduan.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.frmSupplier.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Resources.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Tentang.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.vbproj.GenerateResource.Cache
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.exe
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.pdb
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\TokoKlontong.xml

@@ -40,10 +40,10 @@ Partial Class frmSupplier
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.datasupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -179,7 +179,7 @@ Partial Class frmSupplier
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(-8, -1)
@@ -189,7 +189,7 @@ Partial Class frmSupplier
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Gray
+        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Location = New System.Drawing.Point(6, -3)
         Me.Panel2.Name = "Panel2"
@@ -239,6 +239,15 @@ Partial Class frmSupplier
         Me.Panel3.Size = New System.Drawing.Size(764, 317)
         Me.Panel3.TabIndex = 29
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(30, 270)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 13)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = "Nama Supplier"
+        '
         'btnmenuutaman
         '
         Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -270,15 +279,6 @@ Partial Class frmSupplier
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(283, 20)
         Me.TextBox1.TabIndex = 27
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(30, 270)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 13)
-        Me.Label7.TabIndex = 30
-        Me.Label7.Text = "Nama Supplier"
         '
         'frmSupplier
         '

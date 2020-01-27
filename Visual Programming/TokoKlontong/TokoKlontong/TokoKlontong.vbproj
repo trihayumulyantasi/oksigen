@@ -71,7 +71,43 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.Designer.vb">
+      <DependentUpon>admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang.Designer.vb">
+      <DependentUpon>Barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Koneksi.vb" />
+    <Compile Include="LaporanSupplier.Designer.vb">
+      <DependentUpon>LaporanSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUtaman.Designer.vb">
+      <DependentUpon>MenuUtaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUtaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panduan.Designer.vb">
+      <DependentUpon>panduan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="panduan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supplier.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +130,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Tentang.Designer.vb">
+      <DependentUpon>Tentang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tentang.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang.resx">
+      <DependentUpon>Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanSupplier.resx">
+      <DependentUpon>LaporanSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUtaman.resx">
+      <DependentUpon>MenuUtaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panduan.resx">
+      <DependentUpon>panduan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.vb</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +164,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tentang.resx">
+      <DependentUpon>Tentang.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +180,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginOksigen2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
