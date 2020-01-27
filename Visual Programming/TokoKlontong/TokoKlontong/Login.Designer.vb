@@ -28,6 +28,8 @@ Partial Class Login
         Me.btlogin = New System.Windows.Forms.Button()
         Me.btbatal = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,12 +47,11 @@ Partial Class Login
         'tbusername
         '
         Me.tbusername.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.tbusername.Location = New System.Drawing.Point(110, 167)
+        Me.tbusername.Location = New System.Drawing.Point(110, 177)
         Me.tbusername.Multiline = True
         Me.tbusername.Name = "tbusername"
         Me.tbusername.Size = New System.Drawing.Size(169, 27)
         Me.tbusername.TabIndex = 3
-        Me.tbusername.Text = "username"
         Me.tbusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.tbusername.WordWrap = False
         '
@@ -58,20 +59,19 @@ Partial Class Login
         '
         Me.tbpassword.BackColor = System.Drawing.SystemColors.HighlightText
         Me.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbpassword.Location = New System.Drawing.Point(110, 231)
+        Me.tbpassword.Location = New System.Drawing.Point(110, 250)
         Me.tbpassword.Multiline = True
         Me.tbpassword.Name = "tbpassword"
         Me.tbpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbpassword.Size = New System.Drawing.Size(169, 30)
         Me.tbpassword.TabIndex = 4
-        Me.tbpassword.Text = "password"
         Me.tbpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.tbpassword.WordWrap = False
         '
         'btlogin
         '
         Me.btlogin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btlogin.Location = New System.Drawing.Point(204, 319)
+        Me.btlogin.Location = New System.Drawing.Point(204, 340)
         Me.btlogin.Name = "btlogin"
         Me.btlogin.Size = New System.Drawing.Size(75, 23)
         Me.btlogin.TabIndex = 5
@@ -80,7 +80,7 @@ Partial Class Login
         '
         'btbatal
         '
-        Me.btbatal.Location = New System.Drawing.Point(110, 319)
+        Me.btbatal.Location = New System.Drawing.Point(110, 340)
         Me.btbatal.Name = "btbatal"
         Me.btbatal.Size = New System.Drawing.Size(75, 23)
         Me.btbatal.TabIndex = 6
@@ -93,12 +93,30 @@ Partial Class Login
         Me.CheckBox1.BackColor = System.Drawing.SystemColors.Desktop
         Me.CheckBox1.Font = New System.Drawing.Font("Gadugi", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.CheckBox1.Location = New System.Drawing.Point(110, 276)
+        Me.CheckBox1.Location = New System.Drawing.Point(110, 297)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(146, 20)
         Me.CheckBox1.TabIndex = 30
         Me.CheckBox1.Text = "Tampilkan Password"
         Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(107, 161)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Username"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(107, 234)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.TabIndex = 32
+        Me.Label3.Text = "Password"
         '
         'Login
         '
@@ -107,8 +125,10 @@ Partial Class Login
         Me.BackColor = System.Drawing.SystemColors.Desktop
         Me.BackgroundImage = Global.TokoKlontong.My.Resources.Resources.LoginOksigen2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(386, 390)
+        Me.ClientSize = New System.Drawing.Size(387, 390)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btbatal)
         Me.Controls.Add(Me.btlogin)
@@ -127,4 +147,6 @@ Partial Class Login
     Friend WithEvents btlogin As System.Windows.Forms.Button
     Friend WithEvents btbatal As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
