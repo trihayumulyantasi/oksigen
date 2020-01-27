@@ -46,10 +46,12 @@ Partial Class Barang
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btncari = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btncari = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnmenuutaman = New System.Windows.Forms.Button()
         CType(Me.databarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -113,9 +115,9 @@ Partial Class Barang
         Me.lbidsupplier.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbidsupplier.Location = New System.Drawing.Point(402, 28)
         Me.lbidsupplier.Name = "lbidsupplier"
-        Me.lbidsupplier.Size = New System.Drawing.Size(59, 13)
+        Me.lbidsupplier.Size = New System.Drawing.Size(76, 13)
         Me.lbidsupplier.TabIndex = 5
-        Me.lbidsupplier.Text = "ID Supplier"
+        Me.lbidsupplier.Text = "Nama Supplier"
         '
         'tbidbarang
         '
@@ -147,7 +149,7 @@ Partial Class Barang
         'tbstock
         '
         Me.tbstock.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbstock.Location = New System.Drawing.Point(131, 163)
+        Me.tbstock.Location = New System.Drawing.Point(134, 163)
         Me.tbstock.Multiline = True
         Me.tbstock.Name = "tbstock"
         Me.tbstock.Size = New System.Drawing.Size(206, 20)
@@ -207,7 +209,7 @@ Partial Class Barang
         'tbhargasupplier
         '
         Me.tbhargasupplier.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbhargasupplier.Location = New System.Drawing.Point(132, 124)
+        Me.tbhargasupplier.Location = New System.Drawing.Point(134, 124)
         Me.tbhargasupplier.Multiline = True
         Me.tbhargasupplier.Name = "tbhargasupplier"
         Me.tbhargasupplier.Size = New System.Drawing.Size(206, 20)
@@ -239,9 +241,9 @@ Partial Class Barang
         Me.lbidadmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbidadmin.Location = New System.Drawing.Point(401, 99)
         Me.lbidadmin.Name = "lbidadmin"
-        Me.lbidadmin.Size = New System.Drawing.Size(50, 13)
+        Me.lbidadmin.Size = New System.Drawing.Size(67, 13)
         Me.lbidadmin.TabIndex = 18
-        Me.lbidadmin.Text = "ID Admin"
+        Me.lbidadmin.Text = "Nama Admin"
         '
         'tglinput
         '
@@ -281,6 +283,8 @@ Partial Class Barang
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel3.Controls.Add(Me.btnmenuutaman)
+        Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btncari)
         Me.Panel3.Controls.Add(Me.TextBox1)
         Me.Panel3.Controls.Add(Me.lbidadmin)
@@ -308,6 +312,25 @@ Partial Class Barang
         Me.Panel3.Size = New System.Drawing.Size(765, 383)
         Me.Panel3.TabIndex = 22
         '
+        'btncari
+        '
+        Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btncari.Location = New System.Drawing.Point(450, 346)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(75, 23)
+        Me.btncari.TabIndex = 22
+        Me.btncari.Text = "&Cari"
+        Me.btncari.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(131, 348)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
+        Me.TextBox1.TabIndex = 21
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -327,24 +350,27 @@ Partial Class Barang
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Form Manage Barang"
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(131, 348)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
-        Me.TextBox1.TabIndex = 21
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(31, 350)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Nama Barang"
         '
-        'btncari
+        'btnmenuutaman
         '
-        Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btncari.Location = New System.Drawing.Point(450, 346)
-        Me.btncari.Name = "btncari"
-        Me.btncari.Size = New System.Drawing.Size(75, 23)
-        Me.btncari.TabIndex = 22
-        Me.btncari.Text = "&Cari"
-        Me.btncari.UseVisualStyleBackColor = False
+        Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnmenuutaman.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnmenuutaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnmenuutaman.Location = New System.Drawing.Point(613, 346)
+        Me.btnmenuutaman.Name = "btnmenuutaman"
+        Me.btnmenuutaman.Size = New System.Drawing.Size(124, 23)
+        Me.btnmenuutaman.TabIndex = 24
+        Me.btnmenuutaman.Text = "<<Menu Utama"
+        Me.btnmenuutaman.UseVisualStyleBackColor = False
         '
         'Barang
         '
@@ -397,4 +423,6 @@ Partial Class Barang
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents btnmenuutaman As System.Windows.Forms.Button
 End Class

@@ -118,14 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TextBox1.Text" xml:space="preserve">
-    <value>Panduan 
+    <value>
 1.	Saat anda pertama membuka aplikasi ini, anda harus login terlebih dahulu sebagai admin
-2.	Pada menu file, terdapat subfile logout yang digunakan untuk keluar dari aplikasi jika anda telah selesai menggunakannya.
-3.	Pada menu master, terdapat subfile admin, barang , supplier, dan laporan supplier yang digunakan untuk menambah,mengedit dan menghapus data.
-4.	Pada menu transaksi terdapat subfile transaksi yang digunakan untuk melakukan proses transaksi pembelian. selain itu juga terdapat subfile closing yang digunakan untuk mengkalkulasi data transaksi dalam 1 hari.
-5.	Pada menu laporan terdapat sub menu laporan bulanan yang digunakan untuk menampilkan data transaksi penjualan dalam 7 bulan kebelakang. Selain itu terdapat fitur resi yang digunakan sabagai perantara untuk dapat melihat kembali history pembelian beserta dapat mencetak ulang.
-6.	Pada menu help terdapat sub menu panduan yang digunakan sebagai tata cara penggunaan aplikasi itu, selain itu terdapat fitur tentang yang berisi alasan dalam pembuatan aplikasi ini yaitu untuk memenuhi tugas uas.
-7.	Pembuatan aplikasi ini yaitu untuk memenuhi tugas uas. 
+
+2.	Pada menu file, terdapat subfile logout yang digunakan untuk keluar dari aplikasi jika anda telah selesai                                                   menggunakannya.
+
+3.	Pada menu master, terdapat subfile admin, barang , supplier, dan laporan supplier yang digunakan untuk                                                 menambah,mengedit dan menghapus data.
+
+4.	Pada menu transaksi terdapat subfile transaksi yang digunakan untuk melakukan proses transaksi pembelian. selain                         itu juga terdapat subfile closing yang digunakan untuk mengkalkulasi data transaksi dalam 1 hari.
+
+5.	Pada menu laporan terdapat sub menu laporan bulanan yang digunakan untuk menampilkan data transaksi penjualan                        dalam 1 bulan kebelakang. Selain itu terdapat fitur resi yang digunakan sabagai perantara untuk dapat melihat                                      kembali history pembelian beserta dapat mencetak ulang.
+
+6.	Pada menu help terdapat sub menu panduan yang digunakan sebagai tata cara penggunaan aplikasi itu, selain itu                             terdapat fitur tentang yang berisi alasan dalam pembuatan aplikasi ini yaitu untuk memenuhi tugas uas.
 </value>
   </data>
 </root>
