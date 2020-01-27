@@ -245,4 +245,5 @@ Public Class Barang
         ''bttambah.Text = "Batal"
         statusInput(False, False, False, False, False, False, False, False)
     End Sub
+
 End Class
