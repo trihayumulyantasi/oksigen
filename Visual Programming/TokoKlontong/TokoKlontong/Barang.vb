@@ -61,13 +61,13 @@ Public Class Barang
         KoneksiBuka()
         CMD.Connection = conn
         Dim str As String
-        str = "Select id_supplier from supplier"
+        str = "Select nama_supplier from supplier"
         CMD = New MySqlCommand(str, conn)
 
         MySQLReader = CMD.ExecuteReader
         If MySQLReader.HasRows Then
             Do While MySQLReader.Read
-                cbidsupplier.Items.Add(MySQLReader("id_supplier"))
+                cbidsupplier.Items.Add(MySQLReader("nama_supplier"))
             Loop
         End If
     End Sub
@@ -76,13 +76,13 @@ Public Class Barang
         KoneksiBuka()
         CMD.Connection = conn
         Dim str As String
-        str = "Select id_admin from admin"
+        str = "Select username from admin"
         CMD = New MySqlCommand(str, conn)
 
         MySQLReader = CMD.ExecuteReader
         If MySQLReader.HasRows Then
             Do While MySQLReader.Read
-                cbidadmin.Items.Add(MySQLReader("id_admin"))
+                cbidadmin.Items.Add(MySQLReader("username"))
             Loop
         End If
     End Sub
