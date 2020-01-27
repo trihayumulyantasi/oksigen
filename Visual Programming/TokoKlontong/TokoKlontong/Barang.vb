@@ -109,6 +109,11 @@ Public Class Barang
             statustombol(True, False, True)
             bthapus.Text = "Batal"
             bttambah.Text = "Simpan"
+        ElseIf bttambah.Text = "&Batal" Then
+            statuspembersih()
+            statustombol(True, False, False)
+            statusInput(False, False, False, False, False, False, False, False)
+            bttambah.Text = "&Tambah"
         ElseIf bttambah.Text = "Simpan" Then
             If tbidbarang.Text = "" Then
                 MsgBox("ID Barang Harus diisi", MsgBoxStyle.Information, "Informasi")
@@ -242,8 +247,8 @@ Public Class Barang
         End With
         statustombol(True, True, True)
         bthapus.Text = "&Hapus"
+        bttambah.Text = "&Batal"
         ''bttambah.Text = "Batal"
         statusInput(False, False, False, False, False, False, False, False)
     End Sub
-
 End Class

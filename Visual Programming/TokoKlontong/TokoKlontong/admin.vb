@@ -1,7 +1,6 @@
 ﻿Imports TokoKlontong.Koneksi
 Imports MySql.Data.MySqlClient
 Public Class admin
-
     Private Sub statuspembersih()
         tbidadmin.Text = ""
         tbusername.Text = ""
@@ -63,9 +62,9 @@ Public Class admin
         tbjabatan.Enabled = jabatan
     End Sub
     Private Sub statustombol(tambah As Boolean, ubah As Boolean, hapus As Boolean)
+        bttambah.Enabled = tambah
         btedit.Enabled = ubah
         btdelete.Enabled = hapus
-        bttambah.Enabled = tambah
     End Sub
 
 
@@ -77,6 +76,11 @@ Public Class admin
             statustombol(True, False, True)
             btdelete.Text = "Batal"
             bttambah.Text = "Simpan"
+        ElseIf bttambah.Text = "&Batal" Then
+            statuspembersih()
+            statustombol(True, False, False)
+            statusInput(False, False, False, False, False, False, False)
+            bttambah.Text = "&Tambah"
         ElseIf bttambah.Text = "Simpan" Then
             If tbidadmin.Text = "" Then
                 MsgBox("Id Admin Harus diisi", MsgBoxStyle.Information, "Informasi")
@@ -172,12 +176,15 @@ Public Class admin
             tbidadmin.Text = .Cells(0).Value
             tbusername.Text = .Cells(1).Value
             tbpassword.Text = .Cells(2).Value
-            tbnohp.Text = .Cells(3).Value
-            cbjk.Text = .Cells(4).Value
-            tbjabatan.Text = .Cells(5).Value
+            tbalamat.Text = .Cells(3).Value
+            tbnohp.Text = .Cells(4).Value
+            cbjk.Text = .Cells(5).Value
+            tbjabatan.Text = .Cells(6).Value
+
         End With
         statustombol(True, True, True)
         btdelete.Text = "&Hapus"
+        bttambah.Text = "&Batal"
         ''bttambah.Text = "Batal"
         statusInput(False, False, False, False, False, False, False)
     End Sub

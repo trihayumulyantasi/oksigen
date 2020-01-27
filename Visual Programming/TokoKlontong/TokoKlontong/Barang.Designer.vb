@@ -46,12 +46,12 @@ Partial Class Barang
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnmenuutaman = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btncari = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbcari = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnmenuutaman = New System.Windows.Forms.Button()
         CType(Me.databarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -286,7 +286,7 @@ Partial Class Barang
         Me.Panel3.Controls.Add(Me.btnmenuutaman)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btncari)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.tbcari)
         Me.Panel3.Controls.Add(Me.lbidadmin)
         Me.Panel3.Controls.Add(Me.cbidadmin)
         Me.Panel3.Controls.Add(Me.tglinput)
@@ -312,6 +312,28 @@ Partial Class Barang
         Me.Panel3.Size = New System.Drawing.Size(765, 383)
         Me.Panel3.TabIndex = 22
         '
+        'btnmenuutaman
+        '
+        Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnmenuutaman.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnmenuutaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnmenuutaman.Location = New System.Drawing.Point(613, 346)
+        Me.btnmenuutaman.Name = "btnmenuutaman"
+        Me.btnmenuutaman.Size = New System.Drawing.Size(124, 23)
+        Me.btnmenuutaman.TabIndex = 24
+        Me.btnmenuutaman.Text = "<<Menu Utama"
+        Me.btnmenuutaman.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(31, 350)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Nama Barang"
+        '
         'btncari
         '
         Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -322,14 +344,14 @@ Partial Class Barang
         Me.btncari.Text = "&Cari"
         Me.btncari.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tbcari
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(131, 348)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
-        Me.TextBox1.TabIndex = 21
+        Me.tbcari.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbcari.Location = New System.Drawing.Point(131, 348)
+        Me.tbcari.Multiline = True
+        Me.tbcari.Name = "tbcari"
+        Me.tbcari.Size = New System.Drawing.Size(283, 20)
+        Me.tbcari.TabIndex = 21
         '
         'Panel4
         '
@@ -349,28 +371,6 @@ Partial Class Barang
         Me.Label2.Size = New System.Drawing.Size(244, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Form Manage Barang"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(31, 350)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 13)
-        Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Nama Barang"
-        '
-        'btnmenuutaman
-        '
-        Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnmenuutaman.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnmenuutaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnmenuutaman.Location = New System.Drawing.Point(613, 346)
-        Me.btnmenuutaman.Name = "btnmenuutaman"
-        Me.btnmenuutaman.Size = New System.Drawing.Size(124, 23)
-        Me.btnmenuutaman.TabIndex = 24
-        Me.btnmenuutaman.Text = "<<Menu Utama"
-        Me.btnmenuutaman.UseVisualStyleBackColor = False
         '
         'Barang
         '
@@ -420,7 +420,7 @@ Partial Class Barang
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btncari As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tbcari As System.Windows.Forms.TextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

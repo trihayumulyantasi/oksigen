@@ -46,10 +46,10 @@ Partial Class admin
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dataadmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -114,21 +114,28 @@ Partial Class admin
         '
         'tbidadmin
         '
+        Me.tbidadmin.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbidadmin.Location = New System.Drawing.Point(110, 10)
+        Me.tbidadmin.Multiline = True
         Me.tbidadmin.Name = "tbidadmin"
         Me.tbidadmin.Size = New System.Drawing.Size(266, 20)
         Me.tbidadmin.TabIndex = 5
         '
         'tbusername
         '
+        Me.tbusername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbusername.Location = New System.Drawing.Point(110, 35)
+        Me.tbusername.Multiline = True
         Me.tbusername.Name = "tbusername"
         Me.tbusername.Size = New System.Drawing.Size(266, 20)
         Me.tbusername.TabIndex = 6
         '
         'tbpassword
         '
+        Me.tbpassword.BackColor = System.Drawing.SystemColors.Window
+        Me.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbpassword.Location = New System.Drawing.Point(110, 64)
+        Me.tbpassword.Multiline = True
         Me.tbpassword.Name = "tbpassword"
         Me.tbpassword.Size = New System.Drawing.Size(266, 20)
         Me.tbpassword.TabIndex = 7
@@ -136,6 +143,7 @@ Partial Class admin
         'tbalamat
         '
         Me.tbalamat.BackColor = System.Drawing.SystemColors.Window
+        Me.tbalamat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbalamat.Location = New System.Drawing.Point(110, 91)
         Me.tbalamat.Multiline = True
         Me.tbalamat.Name = "tbalamat"
@@ -144,7 +152,9 @@ Partial Class admin
         '
         'tbnohp
         '
+        Me.tbnohp.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbnohp.Location = New System.Drawing.Point(512, 11)
+        Me.tbnohp.Multiline = True
         Me.tbnohp.Name = "tbnohp"
         Me.tbnohp.Size = New System.Drawing.Size(233, 20)
         Me.tbnohp.TabIndex = 9
@@ -194,7 +204,9 @@ Partial Class admin
         '
         'tbjabatan
         '
+        Me.tbjabatan.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbjabatan.Location = New System.Drawing.Point(512, 63)
+        Me.tbjabatan.Multiline = True
         Me.tbjabatan.Name = "tbjabatan"
         Me.tbjabatan.Size = New System.Drawing.Size(233, 20)
         Me.tbjabatan.TabIndex = 18
@@ -308,6 +320,17 @@ Partial Class admin
         Me.Panel3.Size = New System.Drawing.Size(764, 368)
         Me.Panel3.TabIndex = 30
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(37, 330)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(70, 15)
+        Me.Label10.TabIndex = 33
+        Me.Label10.Text = "User Name"
+        '
         'btnmenuutaman
         '
         Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -339,17 +362,6 @@ Partial Class admin
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(283, 20)
         Me.TextBox1.TabIndex = 30
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(37, 330)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(70, 15)
-        Me.Label10.TabIndex = 33
-        Me.Label10.Text = "User Name"
         '
         'admin
         '

@@ -35,7 +35,7 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Label1.BackColor = System.Drawing.SystemColors.Window
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.GrayText
         Me.Label1.Location = New System.Drawing.Point(94, 111)
@@ -90,7 +90,7 @@ Partial Class Login
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.SystemColors.Desktop
+        Me.CheckBox1.BackColor = System.Drawing.SystemColors.Window
         Me.CheckBox1.Font = New System.Drawing.Font("Gadugi", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.GrayText
         Me.CheckBox1.Location = New System.Drawing.Point(110, 297)
@@ -103,6 +103,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Window
         Me.Label2.Location = New System.Drawing.Point(107, 161)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
@@ -112,6 +113,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.SystemColors.Window
         Me.Label3.Location = New System.Drawing.Point(107, 234)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
@@ -137,6 +139,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
