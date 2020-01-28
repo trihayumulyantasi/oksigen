@@ -46,10 +46,10 @@ Partial Class LaporanSupplier
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btncari = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btncari = New System.Windows.Forms.Button()
+        Me.tbcari = New System.Windows.Forms.TextBox()
         CType(Me.datalaporansupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -71,18 +71,18 @@ Partial Class LaporanSupplier
         Me.lbidsupplier.AutoSize = True
         Me.lbidsupplier.Location = New System.Drawing.Point(10, 49)
         Me.lbidsupplier.Name = "lbidsupplier"
-        Me.lbidsupplier.Size = New System.Drawing.Size(59, 13)
+        Me.lbidsupplier.Size = New System.Drawing.Size(76, 13)
         Me.lbidsupplier.TabIndex = 3
-        Me.lbidsupplier.Text = "ID Supplier"
+        Me.lbidsupplier.Text = "Nama Supplier"
         '
         'lbidbarang
         '
         Me.lbidbarang.AutoSize = True
         Me.lbidbarang.Location = New System.Drawing.Point(10, 80)
         Me.lbidbarang.Name = "lbidbarang"
-        Me.lbidbarang.Size = New System.Drawing.Size(55, 13)
+        Me.lbidbarang.Size = New System.Drawing.Size(72, 13)
         Me.lbidbarang.TabIndex = 4
-        Me.lbidbarang.Text = "ID Barang"
+        Me.lbidbarang.Text = "Nama Barang"
         '
         'lbtglmasuk
         '
@@ -272,7 +272,7 @@ Partial Class LaporanSupplier
         Me.Panel3.Controls.Add(Me.btnmenuutaman)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.btncari)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.tbcari)
         Me.Panel3.Controls.Add(Me.tbidlaporan)
         Me.Panel3.Controls.Add(Me.lbidlaporan)
         Me.Panel3.Controls.Add(Me.datalaporansupplier)
@@ -296,35 +296,6 @@ Partial Class LaporanSupplier
         Me.Panel3.Size = New System.Drawing.Size(764, 402)
         Me.Panel3.TabIndex = 25
         '
-        'btncari
-        '
-        Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btncari.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btncari.Location = New System.Drawing.Point(470, 347)
-        Me.btncari.Name = "btncari"
-        Me.btncari.Size = New System.Drawing.Size(75, 23)
-        Me.btncari.TabIndex = 24
-        Me.btncari.Text = "&Cari"
-        Me.btncari.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(151, 349)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
-        Me.TextBox1.TabIndex = 23
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(68, 352)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
-        Me.Label1.TabIndex = 25
-        Me.Label1.Text = "Status"
-        '
         'btnmenuutaman
         '
         Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
@@ -336,6 +307,35 @@ Partial Class LaporanSupplier
         Me.btnmenuutaman.TabIndex = 26
         Me.btnmenuutaman.Text = "<<Menu Utama"
         Me.btnmenuutaman.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(68, 352)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Status"
+        '
+        'btncari
+        '
+        Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btncari.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btncari.Location = New System.Drawing.Point(470, 347)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(75, 23)
+        Me.btncari.TabIndex = 24
+        Me.btncari.Text = "&Cari"
+        Me.btncari.UseVisualStyleBackColor = False
+        '
+        'tbcari
+        '
+        Me.tbcari.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbcari.Location = New System.Drawing.Point(151, 349)
+        Me.tbcari.Multiline = True
+        Me.tbcari.Name = "tbcari"
+        Me.tbcari.Size = New System.Drawing.Size(283, 20)
+        Me.tbcari.TabIndex = 23
         '
         'LaporanSupplier
         '
@@ -385,7 +385,7 @@ Partial Class LaporanSupplier
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btncari As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tbcari As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnmenuutaman As System.Windows.Forms.Button
 End Class

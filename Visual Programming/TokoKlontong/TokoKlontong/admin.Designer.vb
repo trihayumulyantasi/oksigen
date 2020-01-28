@@ -49,7 +49,7 @@ Partial Class admin
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbcari = New System.Windows.Forms.TextBox()
         CType(Me.dataadmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -296,7 +296,7 @@ Partial Class admin
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.btnmenuutaman)
         Me.Panel3.Controls.Add(Me.btncari)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.tbcari)
         Me.Panel3.Controls.Add(Me.tbalamat)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.dataadmin)
@@ -354,14 +354,14 @@ Partial Class admin
         Me.btncari.Text = "&Cari"
         Me.btncari.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tbcari
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(130, 327)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
-        Me.TextBox1.TabIndex = 30
+        Me.tbcari.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbcari.Location = New System.Drawing.Point(130, 327)
+        Me.tbcari.Multiline = True
+        Me.tbcari.Name = "tbcari"
+        Me.tbcari.Size = New System.Drawing.Size(283, 20)
+        Me.tbcari.TabIndex = 30
         '
         'admin
         '
@@ -414,5 +414,5 @@ Partial Class admin
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnmenuutaman As System.Windows.Forms.Button
     Friend WithEvents btncari As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tbcari As System.Windows.Forms.TextBox
 End Class

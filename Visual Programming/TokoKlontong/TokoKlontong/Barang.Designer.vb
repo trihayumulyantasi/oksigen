@@ -337,6 +337,7 @@ Partial Class Barang
         'btncari
         '
         Me.btncari.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btncari.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btncari.Location = New System.Drawing.Point(450, 346)
         Me.btncari.Name = "btncari"
         Me.btncari.Size = New System.Drawing.Size(75, 23)

@@ -17,7 +17,7 @@ Public Class Barang
         Dim query As String
         Dim data As Integer
 
-        query = "select id_barang, nama_barang, harga_jual, harga_supplier, stock, id_supplier, waktu_input, id_admin from barang"
+        query = "select id_barang, nama_barang, harga_jual, harga_supplier, stock, nama_supplier, waktu_input, nama_admin from barang"
         adapter = New MySqlDataAdapter(query, conn)
         dt = New DataTable
         data = adapter.Fill(dt)
@@ -30,9 +30,9 @@ Public Class Barang
             databarang.Columns(2).HeaderText = "Harga Jual"
             databarang.Columns(3).HeaderText = "Harga Supplier"
             databarang.Columns(4).HeaderText = "Stock"
-            databarang.Columns(5).HeaderText = "ID Supplier"
+            databarang.Columns(5).HeaderText = "Nama Supplier"
             databarang.Columns(6).HeaderText = "Waktu Input"
-            databarang.Columns(7).HeaderText = "ID Admin"
+            databarang.Columns(7).HeaderText = "Nama Admin"
 
         Else
             databarang.DataSource = Nothing
@@ -136,11 +136,11 @@ Public Class Barang
                 tbstock.Focus()
                 Exit Sub
             ElseIf cbidsupplier.Text = "" Then
-                MsgBox("ID Supplier Harus Diisi", MsgBoxStyle.Information, "Informasi")
+                MsgBox("Nama Supplier Harus Diisi", MsgBoxStyle.Information, "Informasi")
                 cbidsupplier.Focus()
                 Exit Sub
             ElseIf cbidadmin.Text = "" Then
-                MsgBox("ID Admin harus diisi", MsgBoxStyle.Information, "Informasi")
+                MsgBox("Nama Admin harus diisi", MsgBoxStyle.Information, "Informasi")
                 cbidadmin.Focus()
                 Exit Sub
             End If
@@ -148,7 +148,7 @@ Public Class Barang
             Try
                 Dim qinsert As String
                 CMD.CommandType = CommandType.Text
-                qinsert = "insert into barang(id_barang, nama_barang, harga_jual, harga_supplier, stock, id_supplier, waktu_input, id_admin)"
+                qinsert = "insert into barang(id_barang, nama_barang, harga_jual, harga_supplier, stock, nama_supplier, waktu_input, nama_admin)"
                 qinsert = qinsert & "values('" & tbidbarang.Text & "', '" & tbnamabarang.Text & "', '" & tbhargajual.Text & "', '" & tbhargasupplier.Text & "', '" & tbstock.Text & "', '" & cbidsupplier.Text & "', '" & tglinput.Value.ToString("yyyy-MM-dd") & "', '" & cbidadmin.Text & "')"
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qinsert
@@ -179,7 +179,7 @@ Public Class Barang
         ElseIf btedit.Text = "&Simpan" Then
             Try
                 Dim qUpdate As String
-                qUpdate = "update barang set nama_barang='" & tbnamabarang.Text & "', harga_jual='" & tbhargajual.Text & "', harga_supplier='" & tbhargajual.Text & "', stock='" & tbstock.Text & "', id_supplier='" & cbidsupplier.Text & "', waktu_input='" & tglinput.Value.ToString("yyyy-MM-dd") & "', id_admin='" & cbidadmin.Text & "' where id_barang='" & tbidbarang.Text & "'"
+                qUpdate = "update barang set nama_barang='" & tbnamabarang.Text & "', harga_jual='" & tbhargajual.Text & "', harga_supplier='" & tbhargajual.Text & "', stock='" & tbstock.Text & "', nama_supplier='" & cbidsupplier.Text & "', waktu_input='" & tglinput.Value.ToString("yyyy-MM-dd") & "', nama_admin='" & cbidadmin.Text & "' where id_barang='" & tbidbarang.Text & "'"
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qUpdate
                 CMD.Connection = conn
@@ -250,5 +250,36 @@ Public Class Barang
         bttambah.Text = "&Batal"
         ''bttambah.Text = "Batal"
         statusInput(False, False, False, False, False, False, False, False)
+    End Sub
+
+    Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+        Dim dt As DataTable
+        Dim adapter As MySqlDataAdapter
+        Dim query As String
+        Dim data As Integer
+
+        query = "select * from barang where nama_barang like '%" & tbcari.Text & "%'"
+        adapter = New MySqlDataAdapter(query, conn)
+        dt = New DataTable
+        data = adapter.Fill(dt)
+
+        If data > 0 Then
+            databarang.DataSource = dt
+            databarang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
+            databarang.Columns(0).HeaderText = "Id Barang"
+            databarang.Columns(1).HeaderText = "Nama Barang"
+            databarang.Columns(2).HeaderText = "Harga Jual"
+            databarang.Columns(3).HeaderText = "Harga Supplier"
+            databarang.Columns(4).HeaderText = "Stock"
+            databarang.Columns(5).HeaderText = "Nama Supplier"
+            databarang.Columns(6).HeaderText = "Waktu Input"
+            databarang.Columns(7).HeaderText = "Nama Admin"
+
+        Else
+            databarang.DataSource = Nothing
+        End If
+        tbcari.Text = ""
     End Sub
 End Class

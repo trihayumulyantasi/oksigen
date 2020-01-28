@@ -218,7 +218,33 @@ Public Class admin
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Me.Close()
+    Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+        Dim dt As DataTable
+        Dim adapter As MySqlDataAdapter
+        Dim query As String
+        Dim data As Integer
+
+        query = "select * from admin where username like '%" & tbcari.Text & "%'"
+        adapter = New MySqlDataAdapter(query, conn)
+        dt = New DataTable
+        data = adapter.Fill(dt)
+
+        If data > 0 Then
+            dataadmin.DataSource = dt
+            dataadmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
+            dataadmin.Columns(0).HeaderText = "Id Admin"
+            dataadmin.Columns(1).HeaderText = "Username"
+            dataadmin.Columns(2).HeaderText = "Password"
+            dataadmin.Columns(3).HeaderText = "Alamat"
+            dataadmin.Columns(4).HeaderText = "No Hp"
+            dataadmin.Columns(5).HeaderText = "Jenis Kelamin"
+            dataadmin.Columns(6).HeaderText = "Jabatan"
+
+        Else
+            dataadmin.DataSource = Nothing
+        End If
+        tbcari.Text = ""
     End Sub
 End Class

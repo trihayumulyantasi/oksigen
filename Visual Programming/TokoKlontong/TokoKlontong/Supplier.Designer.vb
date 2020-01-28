@@ -43,7 +43,9 @@ Partial Class frmSupplier
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbcari = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.tglinput = New System.Windows.Forms.DateTimePicker()
         CType(Me.datasupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -103,7 +105,7 @@ Partial Class frmSupplier
         Me.tbnohp.Location = New System.Drawing.Point(531, 13)
         Me.tbnohp.Multiline = True
         Me.tbnohp.Name = "tbnohp"
-        Me.tbnohp.Size = New System.Drawing.Size(189, 20)
+        Me.tbnohp.Size = New System.Drawing.Size(200, 20)
         Me.tbnohp.TabIndex = 1
         '
         'tbalamatsupplier
@@ -119,7 +121,7 @@ Partial Class frmSupplier
         '
         Me.btdelete.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btdelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btdelete.Location = New System.Drawing.Point(645, 70)
+        Me.btdelete.Location = New System.Drawing.Point(638, 92)
         Me.btdelete.Name = "btdelete"
         Me.btdelete.Size = New System.Drawing.Size(75, 37)
         Me.btdelete.TabIndex = 2
@@ -130,7 +132,7 @@ Partial Class frmSupplier
         '
         Me.btedit.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btedit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btedit.Location = New System.Drawing.Point(552, 70)
+        Me.btedit.Location = New System.Drawing.Point(545, 92)
         Me.btedit.Name = "btedit"
         Me.btedit.Size = New System.Drawing.Size(75, 37)
         Me.btedit.TabIndex = 3
@@ -141,7 +143,7 @@ Partial Class frmSupplier
         '
         Me.bttambah.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.bttambah.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bttambah.Location = New System.Drawing.Point(447, 70)
+        Me.bttambah.Location = New System.Drawing.Point(440, 92)
         Me.bttambah.Name = "bttambah"
         Me.bttambah.Size = New System.Drawing.Size(75, 37)
         Me.bttambah.TabIndex = 4
@@ -218,10 +220,12 @@ Partial Class frmSupplier
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel3.Controls.Add(Me.tglinput)
+        Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.btnmenuutaman)
         Me.Panel3.Controls.Add(Me.btncari)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.tbcari)
         Me.Panel3.Controls.Add(Me.tbidsupplier)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.datasupplier)
@@ -271,14 +275,31 @@ Partial Class frmSupplier
         Me.btncari.Text = "&Cari"
         Me.btncari.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tbcari
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(128, 268)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 20)
-        Me.TextBox1.TabIndex = 27
+        Me.tbcari.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbcari.Location = New System.Drawing.Point(128, 268)
+        Me.tbcari.Multiline = True
+        Me.tbcari.Name = "tbcari"
+        Me.tbcari.Size = New System.Drawing.Size(283, 20)
+        Me.tbcari.TabIndex = 27
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(441, 54)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Tanggal Input"
+        '
+        'tglinput
+        '
+        Me.tglinput.Enabled = False
+        Me.tglinput.Location = New System.Drawing.Point(531, 54)
+        Me.tglinput.Name = "tglinput"
+        Me.tglinput.Size = New System.Drawing.Size(200, 20)
+        Me.tglinput.TabIndex = 32
         '
         'frmSupplier
         '
@@ -324,6 +345,8 @@ Partial Class frmSupplier
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnmenuutaman As System.Windows.Forms.Button
     Friend WithEvents btncari As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tbcari As System.Windows.Forms.TextBox
+    Friend WithEvents tglinput As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 
 End Class
