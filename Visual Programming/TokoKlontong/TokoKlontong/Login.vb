@@ -24,7 +24,7 @@ Public Class Login
             If MySQLReader.HasRows Then
                 tbusername.Text = ""
                 tbpassword.Text = ""
-                MenuUtaman.Show()
+                Menuaja.Show()
                 Me.Hide()
             Else
                 'agar dapat mengulang ketika salah memasukkan username dan password

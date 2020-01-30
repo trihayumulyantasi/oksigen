@@ -40,12 +40,12 @@ Partial Class frmSupplier
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.tglinput = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnmenuutaman = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
         Me.tbcari = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.tglinput = New System.Windows.Forms.DateTimePicker()
         CType(Me.datasupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -181,7 +181,7 @@ Partial Class frmSupplier
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(-8, -1)
@@ -191,7 +191,7 @@ Partial Class frmSupplier
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.BackColor = System.Drawing.Color.Gray
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Location = New System.Drawing.Point(6, -3)
         Me.Panel2.Name = "Panel2"
@@ -243,6 +243,23 @@ Partial Class frmSupplier
         Me.Panel3.Size = New System.Drawing.Size(764, 317)
         Me.Panel3.TabIndex = 29
         '
+        'tglinput
+        '
+        Me.tglinput.Enabled = False
+        Me.tglinput.Location = New System.Drawing.Point(531, 54)
+        Me.tglinput.Name = "tglinput"
+        Me.tglinput.Size = New System.Drawing.Size(200, 20)
+        Me.tglinput.TabIndex = 32
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(441, 54)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Tanggal Input"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -283,23 +300,6 @@ Partial Class frmSupplier
         Me.tbcari.Name = "tbcari"
         Me.tbcari.Size = New System.Drawing.Size(283, 20)
         Me.tbcari.TabIndex = 27
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(441, 54)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 13)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "Tanggal Input"
-        '
-        'tglinput
-        '
-        Me.tglinput.Enabled = False
-        Me.tglinput.Location = New System.Drawing.Point(531, 54)
-        Me.tglinput.Name = "tglinput"
-        Me.tglinput.Size = New System.Drawing.Size(200, 20)
-        Me.tglinput.TabIndex = 32
         '
         'frmSupplier
         '

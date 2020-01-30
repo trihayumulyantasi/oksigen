@@ -80,9 +80,9 @@ Partial Class panduan
         '
         Me.Panel2.BackColor = System.Drawing.Color.Gray
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(6, -2)
+        Me.Panel2.Location = New System.Drawing.Point(-2, -2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(795, 54)
+        Me.Panel2.Size = New System.Drawing.Size(806, 54)
         Me.Panel2.TabIndex = 0
         '
         'Label2
