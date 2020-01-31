@@ -23,8 +23,8 @@ Partial Class Menuaja
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -52,14 +52,6 @@ Partial Class Menuaja
         Me.Panel1.Size = New System.Drawing.Size(765, 55)
         Me.Panel1.TabIndex = 0
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.PowderBlue
-        Me.Panel2.Location = New System.Drawing.Point(-4, 357)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(765, 22)
-        Me.Panel2.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -69,6 +61,14 @@ Partial Class Menuaja
         Me.Label1.Size = New System.Drawing.Size(257, 36)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Toko Kelontong O2"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.PowderBlue
+        Me.Panel2.Location = New System.Drawing.Point(-4, 357)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(765, 22)
+        Me.Panel2.TabIndex = 1
         '
         'Label3
         '

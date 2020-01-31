@@ -41,4 +41,9 @@ Public Class Menuaja
             Login.Show()
         End If
     End Sub
+
+    Private Sub btntransaksi_Click(sender As Object, e As EventArgs) Handles btntransaksi.Click
+        Transaksi.Show()
+        Me.Close()
+    End Sub
 End Class

@@ -55,5 +55,7 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tbusername.TextAlign = HorizontalAlignment.Center
         tbpassword.TextAlign = HorizontalAlignment.Center
+        tbusername.Text = "admin1"
+        tbpassword.Text = "admin1"
     End Sub
 End Class
