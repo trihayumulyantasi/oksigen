@@ -183,4 +183,24 @@ Public Class Transaksi
         statusbersih()
         datadibeli.Rows.Clear()
     End Sub
+
+    Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+        Try
+            Dim qinsert As String
+            CMD.CommandType = CommandType.Text
+            qinsert = "insert into transaksi(id_transaksi, tanggal, waktu, total_item, diskon, total_harga, pembayaran, kembalian)"
+            qinsert = qinsert & "values('" & lbnotransaksi.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbtotalitem.Text & "', '" & tbdiskon.Text & "', '" & lbtotalbayar.Text & "', '" & tbpembayaran.Text & "', '" & lbkembalian.Text & "')"
+            CMD.CommandType = CommandType.Text
+            CMD.CommandText = qinsert
+            CMD.Connection = conn
+            CMD.ExecuteNonQuery()
+
+            tampildata()
+        Catch ex As Exception
+            MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
+
+        End Try
+    End Sub
 End Class

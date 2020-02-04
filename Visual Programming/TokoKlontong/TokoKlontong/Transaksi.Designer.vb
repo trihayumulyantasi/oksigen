@@ -36,6 +36,8 @@ Partial Class Transaksi
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnsimpan = New System.Windows.Forms.Button()
+        Me.btnbersih = New System.Windows.Forms.Button()
         Me.tbpembayaran = New System.Windows.Forms.TextBox()
         Me.tbdiskon = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -59,8 +61,6 @@ Partial Class Transaksi
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.databarang = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnbersih = New System.Windows.Forms.Button()
-        Me.btnsimpan = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -234,6 +234,32 @@ Partial Class Transaksi
         Me.Panel3.Size = New System.Drawing.Size(764, 419)
         Me.Panel3.TabIndex = 31
         '
+        'btnsimpan
+        '
+        Me.btnsimpan.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnsimpan.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnsimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnsimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsimpan.Location = New System.Drawing.Point(539, 317)
+        Me.btnsimpan.Name = "btnsimpan"
+        Me.btnsimpan.Size = New System.Drawing.Size(88, 42)
+        Me.btnsimpan.TabIndex = 33
+        Me.btnsimpan.Text = "&Simpan"
+        Me.btnsimpan.UseVisualStyleBackColor = False
+        '
+        'btnbersih
+        '
+        Me.btnbersih.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnbersih.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnbersih.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnbersih.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnbersih.Location = New System.Drawing.Point(633, 317)
+        Me.btnbersih.Name = "btnbersih"
+        Me.btnbersih.Size = New System.Drawing.Size(88, 42)
+        Me.btnbersih.TabIndex = 33
+        Me.btnbersih.Text = "&Bersih"
+        Me.btnbersih.UseVisualStyleBackColor = False
+        '
         'tbpembayaran
         '
         Me.tbpembayaran.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -256,7 +282,7 @@ Partial Class Transaksi
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(12, 170)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(145, 16)
+        Me.Label8.Size = New System.Drawing.Size(140, 16)
         Me.Label8.TabIndex = 31
         Me.Label8.Text = "Data Barang Dibeli"
         '
@@ -376,7 +402,7 @@ Partial Class Transaksi
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(12, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 16)
+        Me.Label4.Size = New System.Drawing.Size(95, 16)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Data Barang"
         '
@@ -433,32 +459,6 @@ Partial Class Transaksi
         'Timer1
         '
         Me.Timer1.Enabled = True
-        '
-        'btnbersih
-        '
-        Me.btnbersih.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnbersih.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnbersih.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnbersih.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbersih.Location = New System.Drawing.Point(633, 317)
-        Me.btnbersih.Name = "btnbersih"
-        Me.btnbersih.Size = New System.Drawing.Size(88, 42)
-        Me.btnbersih.TabIndex = 33
-        Me.btnbersih.Text = "&Bersih"
-        Me.btnbersih.UseVisualStyleBackColor = False
-        '
-        'btnsimpan
-        '
-        Me.btnsimpan.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnsimpan.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnsimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnsimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsimpan.Location = New System.Drawing.Point(539, 317)
-        Me.btnsimpan.Name = "btnsimpan"
-        Me.btnsimpan.Size = New System.Drawing.Size(88, 42)
-        Me.btnsimpan.TabIndex = 33
-        Me.btnsimpan.Text = "&Simpan"
-        Me.btnsimpan.UseVisualStyleBackColor = False
         '
         'Transaksi
         '
