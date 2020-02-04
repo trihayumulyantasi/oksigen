@@ -55,10 +55,10 @@ Partial Class Menuaja
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Adobe Hebrew", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(263, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(257, 36)
+        Me.Label1.Size = New System.Drawing.Size(282, 33)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Toko Kelontong O2"
         '
@@ -74,7 +74,7 @@ Partial Class Menuaja
         '
         Me.Label3.BackColor = System.Drawing.Color.Gray
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label3.Font = New System.Drawing.Font("Adobe Hebrew", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.PowderBlue
         Me.Label3.Location = New System.Drawing.Point(207, 69)
         Me.Label3.Name = "Label3"
@@ -87,7 +87,7 @@ Partial Class Menuaja
         '
         Me.Label2.BackColor = System.Drawing.Color.Gray
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Adobe Hebrew", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
         Me.Label2.Location = New System.Drawing.Point(384, 69)
         Me.Label2.Name = "Label2"
@@ -100,7 +100,7 @@ Partial Class Menuaja
         '
         Me.Label4.BackColor = System.Drawing.Color.Gray
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Font = New System.Drawing.Font("Adobe Hebrew", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.PowderBlue
         Me.Label4.Location = New System.Drawing.Point(561, 69)
         Me.Label4.Name = "Label4"
@@ -113,7 +113,7 @@ Partial Class Menuaja
         '
         Me.Label5.BackColor = System.Drawing.Color.Gray
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label5.Font = New System.Drawing.Font("Adobe Hebrew", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.PowderBlue
         Me.Label5.Location = New System.Drawing.Point(30, 69)
         Me.Label5.Name = "Label5"

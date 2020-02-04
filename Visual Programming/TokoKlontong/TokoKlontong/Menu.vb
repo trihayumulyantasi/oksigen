@@ -46,4 +46,9 @@ Public Class Menuaja
         Transaksi.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnlapbulanan_Click(sender As Object, e As EventArgs) Handles btnlapbulanan.Click
+        LaporanTransaksi.Show()
+        Me.Close()
+    End Sub
 End Class

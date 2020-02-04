@@ -72,7 +72,7 @@ Public Class Transaksi
     Private Sub Transaksi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         statusbersih()
         tampildata()
-        notransaksi()
+        nofaktur()
     End Sub
     Sub notransaksi()
      
@@ -81,6 +81,32 @@ Public Class Transaksi
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lbjam.Text = TimeOfDay
     End Sub
+
+    Sub nofaktur()
+        Try
+            KoneksiBuka()
+            CMD = New MySqlCommand
+            CMD.Connection = conn
+            str = "select * from transaksi where id_transaksi in(select max(id_transaksi) from transaksi) order by id_transaksi DESC"
+            CMD.CommandText = str
+            MySQLReader = CMD.ExecuteReader
+            MySQLReader.Read()
+
+            If Not MySQLReader.HasRows Then
+                tbnotrans.Text = Format(Now, "yyMMdd") + "0001"
+            Else
+                If Microsoft.VisualBasic.Left(MySQLReader.GetString(0), 6) <> Format(Now, "yyMMdd") Then
+                    tbnotrans.Text = Format(Now, "yyMMdd") + "0001"
+                Else
+                    tbnotrans.Text = MySQLReader.Item("id_transaksi") + 1
+
+                End If
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 
     Private Sub databarang_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles databarang.CellMouseClick
         lbidbarang.Text = databarang.Rows(e.RowIndex).Cells(0).Value
@@ -230,5 +256,9 @@ Public Class Transaksi
         tbjumlah.Text = ""
         Call totalbayar()
         Call totalitem()
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
     End Sub
 End Class
