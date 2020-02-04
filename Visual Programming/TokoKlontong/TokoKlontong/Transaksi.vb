@@ -185,6 +185,7 @@ Public Class Transaksi
     Private Sub btnbersih_Click(sender As Object, e As EventArgs) Handles btnbersih.Click
         statusbersih()
         datadibeli.Rows.Clear()
+        tbnotrans.Text = ""
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
@@ -215,7 +216,7 @@ Public Class Transaksi
             Dim qinsert As String
             CMD.CommandType = CommandType.Text
             qinsert = "insert into detail_transaksi(id_detailtrans, tanggal, waktu, nama_barang, harga_barang, jumlah)"
-            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', , '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
+            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
             CMD.CommandType = CommandType.Text
             CMD.CommandText = qinsert
             CMD.Connection = conn
@@ -228,5 +229,6 @@ Public Class Transaksi
         lbhargabarang.Text = ""
         tbjumlah.Text = ""
         Call totalbayar()
+        Call totalitem()
     End Sub
 End Class
