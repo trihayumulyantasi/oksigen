@@ -8,6 +8,9 @@ Public Class Transaksi
         lbkembalian.Text = ""
         lbtotalbayar.Text = ""
         lbtotalitem.Text = ""
+        lbidbarang.Text = ""
+        lbnamabarang.Text = ""
+        lbhargabarang.Text = ""
     End Sub
 
     Private Sub tampildata()
@@ -80,8 +83,9 @@ Public Class Transaksi
     End Sub
 
     Private Sub databarang_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles databarang.CellMouseClick
-        Dim row As String() = New String() {databarang.Rows(e.RowIndex).Cells(0).Value, databarang.Rows(e.RowIndex).Cells(1).Value, databarang.Rows(e.RowIndex).Cells(2).Value, 1, 1 * databarang.Rows(e.RowIndex).Cells(2).Value}
-        datadibeli.Rows.Add(row)
+        lbidbarang.Text = databarang.Rows(e.RowIndex).Cells(0).Value
+        lbnamabarang.Text = databarang.Rows(e.RowIndex).Cells(1).Value
+        lbhargabarang.Text = databarang.Rows(e.RowIndex).Cells(2).Value
 
         For i As Integer = 0 To datadibeli.RowCount - 1
             For j As Integer = i + 1 To datadibeli.RowCount - 1
@@ -139,8 +143,7 @@ Public Class Transaksi
                 MsgBox("Masukkan angka saja")
                 SendKeys.Send("{UP}")
                 datadibeli.Rows(e.RowIndex).Cells(3).Value = 1
-                datadibeli.Rows(e.RowIndex).Cells(4).Value = datadibeli.Rows(e.RowIndex).Cells(2).Value * datadibeli.Rows(e.RowIndex).Cells(3).Value
-
+                
             End Try
 
         End If
@@ -191,7 +194,7 @@ Public Class Transaksi
             Dim qinsert As String
             CMD.CommandType = CommandType.Text
             qinsert = "insert into transaksi(id_transaksi, tanggal, waktu, total_item, diskon, total_harga, pembayaran, kembalian)"
-            qinsert = qinsert & "values('" & lbnotransaksi.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbtotalitem.Text & "', '" & tbdiskon.Text & "', '" & lbtotalbayar.Text & "', '" & tbpembayaran.Text & "', '" & lbkembalian.Text & "')"
+            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbtotalitem.Text & "', '" & tbdiskon.Text & "', '" & lbtotalbayar.Text & "', '" & tbpembayaran.Text & "', '" & lbkembalian.Text & "')"
             CMD.CommandType = CommandType.Text
             CMD.CommandText = qinsert
             CMD.Connection = conn
@@ -202,5 +205,28 @@ Public Class Transaksi
             MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
 
         End Try
+    End Sub
+    Private Sub btninput_Click(sender As Object, e As EventArgs) Handles btninput.Click
+        Dim harga As Integer
+        harga = Val(lbhargabarang.Text) * Val(tbjumlah.Text)
+        datadibeli.Rows.Add(New String() {lbidbarang.Text, lbnamabarang.Text, lbhargabarang.Text, tbjumlah.Text, harga})
+
+        Try
+            Dim qinsert As String
+            CMD.CommandType = CommandType.Text
+            qinsert = "insert into detail_transaksi(id_detailtrans, tanggal, waktu, nama_barang, harga_barang, jumlah)"
+            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', , '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
+            CMD.CommandType = CommandType.Text
+            CMD.CommandText = qinsert
+            CMD.Connection = conn
+            CMD.ExecuteNonQuery()
+        Catch ex As Exception
+
+        End Try
+        lbidbarang.Text = ""
+        lbnamabarang.Text = ""
+        lbhargabarang.Text = ""
+        tbjumlah.Text = ""
+        Call totalbayar()
     End Sub
 End Class

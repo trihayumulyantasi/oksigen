@@ -31,7 +31,6 @@ Partial Class Transaksi
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbtanggal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbnotransaksi = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -54,13 +53,23 @@ Partial Class Transaksi
         Me.tbcari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.datadibeli = New System.Windows.Forms.DataGridView()
+        Me.databarang = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbidbarang = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbnamabarang = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lbhargabarang = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.tbjumlah = New System.Windows.Forms.TextBox()
+        Me.btninput = New System.Windows.Forms.Button()
         Me.idbarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nama = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.databarang = New System.Windows.Forms.DataGridView()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.tbnotrans = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -102,11 +111,11 @@ Partial Class Transaksi
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.GroupBox1.Controls.Add(Me.tbnotrans)
         Me.GroupBox1.Controls.Add(Me.lbjam)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.lbtanggal)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.lbnotransaksi)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 75)
@@ -164,18 +173,6 @@ Partial Class Transaksi
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tanggal"
         '
-        'lbnotransaksi
-        '
-        Me.lbnotransaksi.AutoSize = True
-        Me.lbnotransaksi.BackColor = System.Drawing.SystemColors.Control
-        Me.lbnotransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lbnotransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbnotransaksi.Location = New System.Drawing.Point(103, 27)
-        Me.lbnotransaksi.Name = "lbnotransaksi"
-        Me.lbnotransaksi.Size = New System.Drawing.Size(90, 18)
-        Me.lbnotransaksi.TabIndex = 0
-        Me.lbnotransaksi.Text = "lbnotransaksi"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -210,6 +207,15 @@ Partial Class Transaksi
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel3.Controls.Add(Me.btninput)
+        Me.Panel3.Controls.Add(Me.tbjumlah)
+        Me.Panel3.Controls.Add(Me.Label16)
+        Me.Panel3.Controls.Add(Me.lbhargabarang)
+        Me.Panel3.Controls.Add(Me.Label15)
+        Me.Panel3.Controls.Add(Me.lbnamabarang)
+        Me.Panel3.Controls.Add(Me.Label14)
+        Me.Panel3.Controls.Add(Me.lbidbarang)
+        Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.btnsimpan)
         Me.Panel3.Controls.Add(Me.btnbersih)
         Me.Panel3.Controls.Add(Me.tbpembayaran)
@@ -231,7 +237,7 @@ Partial Class Transaksi
         Me.Panel3.Controls.Add(Me.databarang)
         Me.Panel3.Location = New System.Drawing.Point(14, 177)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(764, 419)
+        Me.Panel3.Size = New System.Drawing.Size(764, 491)
         Me.Panel3.TabIndex = 31
         '
         'btnsimpan
@@ -240,7 +246,7 @@ Partial Class Transaksi
         Me.btnsimpan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnsimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnsimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsimpan.Location = New System.Drawing.Point(539, 317)
+        Me.btnsimpan.Location = New System.Drawing.Point(539, 374)
         Me.btnsimpan.Name = "btnsimpan"
         Me.btnsimpan.Size = New System.Drawing.Size(88, 42)
         Me.btnsimpan.TabIndex = 33
@@ -253,7 +259,7 @@ Partial Class Transaksi
         Me.btnbersih.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnbersih.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnbersih.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnbersih.Location = New System.Drawing.Point(633, 317)
+        Me.btnbersih.Location = New System.Drawing.Point(633, 374)
         Me.btnbersih.Name = "btnbersih"
         Me.btnbersih.Size = New System.Drawing.Size(88, 42)
         Me.btnbersih.TabIndex = 33
@@ -263,7 +269,7 @@ Partial Class Transaksi
         'tbpembayaran
         '
         Me.tbpembayaran.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbpembayaran.Location = New System.Drawing.Point(376, 317)
+        Me.tbpembayaran.Location = New System.Drawing.Point(376, 374)
         Me.tbpembayaran.Name = "tbpembayaran"
         Me.tbpembayaran.Size = New System.Drawing.Size(100, 20)
         Me.tbpembayaran.TabIndex = 32
@@ -271,7 +277,7 @@ Partial Class Transaksi
         'tbdiskon
         '
         Me.tbdiskon.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbdiskon.Location = New System.Drawing.Point(125, 317)
+        Me.tbdiskon.Location = New System.Drawing.Point(125, 374)
         Me.tbdiskon.Name = "tbdiskon"
         Me.tbdiskon.Size = New System.Drawing.Size(100, 20)
         Me.tbdiskon.TabIndex = 32
@@ -280,7 +286,7 @@ Partial Class Transaksi
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(12, 170)
+        Me.Label8.Location = New System.Drawing.Point(12, 226)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(140, 16)
         Me.Label8.TabIndex = 31
@@ -290,7 +296,7 @@ Partial Class Transaksi
         '
         Me.lbkembalian.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbkembalian.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbkembalian.Location = New System.Drawing.Point(376, 338)
+        Me.lbkembalian.Location = New System.Drawing.Point(376, 395)
         Me.lbkembalian.Name = "lbkembalian"
         Me.lbkembalian.Size = New System.Drawing.Size(100, 21)
         Me.lbkembalian.TabIndex = 30
@@ -300,7 +306,7 @@ Partial Class Transaksi
         '
         Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(273, 338)
+        Me.Label13.Location = New System.Drawing.Point(273, 395)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(100, 21)
         Me.Label13.TabIndex = 30
@@ -310,7 +316,7 @@ Partial Class Transaksi
         '
         Me.lbpembayaran.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbpembayaran.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbpembayaran.Location = New System.Drawing.Point(273, 317)
+        Me.lbpembayaran.Location = New System.Drawing.Point(273, 374)
         Me.lbpembayaran.Name = "lbpembayaran"
         Me.lbpembayaran.Size = New System.Drawing.Size(100, 21)
         Me.lbpembayaran.TabIndex = 30
@@ -320,7 +326,7 @@ Partial Class Transaksi
         '
         Me.lbtotalitem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbtotalitem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbtotalitem.Location = New System.Drawing.Point(125, 359)
+        Me.lbtotalitem.Location = New System.Drawing.Point(125, 416)
         Me.lbtotalitem.Name = "lbtotalitem"
         Me.lbtotalitem.Size = New System.Drawing.Size(100, 21)
         Me.lbtotalitem.TabIndex = 30
@@ -330,7 +336,7 @@ Partial Class Transaksi
         '
         Me.lbtotalbayar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbtotalbayar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbtotalbayar.Location = New System.Drawing.Point(125, 338)
+        Me.lbtotalbayar.Location = New System.Drawing.Point(125, 395)
         Me.lbtotalbayar.Name = "lbtotalbayar"
         Me.lbtotalbayar.Size = New System.Drawing.Size(100, 21)
         Me.lbtotalbayar.TabIndex = 30
@@ -340,7 +346,7 @@ Partial Class Transaksi
         '
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(24, 359)
+        Me.Label11.Location = New System.Drawing.Point(24, 416)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(93, 21)
         Me.Label11.TabIndex = 30
@@ -350,7 +356,7 @@ Partial Class Transaksi
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(24, 338)
+        Me.Label10.Location = New System.Drawing.Point(24, 395)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(93, 21)
         Me.Label10.TabIndex = 30
@@ -360,7 +366,7 @@ Partial Class Transaksi
         '
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(25, 317)
+        Me.Label9.Location = New System.Drawing.Point(25, 374)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(93, 21)
         Me.Label9.TabIndex = 30
@@ -380,7 +386,7 @@ Partial Class Transaksi
         Me.btnmenuutaman.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnmenuutaman.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnmenuutaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnmenuutaman.Location = New System.Drawing.Point(597, 393)
+        Me.btnmenuutaman.Location = New System.Drawing.Point(597, 450)
         Me.btnmenuutaman.Name = "btnmenuutaman"
         Me.btnmenuutaman.Size = New System.Drawing.Size(124, 23)
         Me.btnmenuutaman.TabIndex = 29
@@ -412,10 +418,121 @@ Partial Class Transaksi
         Me.datadibeli.BackgroundColor = System.Drawing.Color.Snow
         Me.datadibeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datadibeli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idbarang, Me.nama, Me.harga, Me.jumlah, Me.total})
-        Me.datadibeli.Location = New System.Drawing.Point(24, 198)
+        Me.datadibeli.Location = New System.Drawing.Point(24, 254)
         Me.datadibeli.Name = "datadibeli"
         Me.datadibeli.Size = New System.Drawing.Size(696, 104)
         Me.datadibeli.TabIndex = 5
+        '
+        'databarang
+        '
+        Me.databarang.AllowUserToAddRows = False
+        Me.databarang.BackgroundColor = System.Drawing.Color.Snow
+        Me.databarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.databarang.Location = New System.Drawing.Point(25, 44)
+        Me.databarang.Name = "databarang"
+        Me.databarang.Size = New System.Drawing.Size(696, 104)
+        Me.databarang.TabIndex = 5
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.SystemColors.Control
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(27, 158)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(95, 18)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "ID Barang"
+        '
+        'lbidbarang
+        '
+        Me.lbidbarang.BackColor = System.Drawing.SystemColors.Control
+        Me.lbidbarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbidbarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbidbarang.Location = New System.Drawing.Point(146, 158)
+        Me.lbidbarang.Name = "lbidbarang"
+        Me.lbidbarang.Size = New System.Drawing.Size(112, 18)
+        Me.lbidbarang.TabIndex = 1
+        Me.lbidbarang.Text = "id"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.SystemColors.Control
+        Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(27, 189)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(94, 18)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "Nama Barang"
+        '
+        'lbnamabarang
+        '
+        Me.lbnamabarang.BackColor = System.Drawing.SystemColors.Control
+        Me.lbnamabarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbnamabarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbnamabarang.Location = New System.Drawing.Point(146, 189)
+        Me.lbnamabarang.Name = "lbnamabarang"
+        Me.lbnamabarang.Size = New System.Drawing.Size(112, 18)
+        Me.lbnamabarang.TabIndex = 1
+        Me.lbnamabarang.Text = "nb"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.SystemColors.Control
+        Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(376, 159)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(95, 18)
+        Me.Label15.TabIndex = 1
+        Me.Label15.Text = "Harga Barang"
+        '
+        'lbhargabarang
+        '
+        Me.lbhargabarang.BackColor = System.Drawing.SystemColors.Control
+        Me.lbhargabarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbhargabarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbhargabarang.Location = New System.Drawing.Point(504, 159)
+        Me.lbhargabarang.Name = "lbhargabarang"
+        Me.lbhargabarang.Size = New System.Drawing.Size(90, 18)
+        Me.lbhargabarang.TabIndex = 1
+        Me.lbhargabarang.Text = "hb"
+        '
+        'Label16
+        '
+        Me.Label16.BackColor = System.Drawing.SystemColors.Control
+        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(376, 189)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(95, 18)
+        Me.Label16.TabIndex = 1
+        Me.Label16.Text = "Jumlah"
+        '
+        'tbjumlah
+        '
+        Me.tbjumlah.Location = New System.Drawing.Point(504, 187)
+        Me.tbjumlah.Name = "tbjumlah"
+        Me.tbjumlah.Size = New System.Drawing.Size(90, 20)
+        Me.tbjumlah.TabIndex = 34
+        '
+        'btninput
+        '
+        Me.btninput.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btninput.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btninput.Location = New System.Drawing.Point(645, 159)
+        Me.btninput.Name = "btninput"
+        Me.btninput.Size = New System.Drawing.Size(75, 23)
+        Me.btninput.TabIndex = 35
+        Me.btninput.Text = "&Input"
+        Me.btninput.UseVisualStyleBackColor = False
         '
         'idbarang
         '
@@ -439,6 +556,7 @@ Partial Class Transaksi
         '
         Me.jumlah.HeaderText = "Jumlah"
         Me.jumlah.Name = "jumlah"
+        Me.jumlah.ReadOnly = True
         '
         'total
         '
@@ -446,25 +564,18 @@ Partial Class Transaksi
         Me.total.Name = "total"
         Me.total.ReadOnly = True
         '
-        'databarang
+        'tbnotrans
         '
-        Me.databarang.AllowUserToAddRows = False
-        Me.databarang.BackgroundColor = System.Drawing.Color.Snow
-        Me.databarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.databarang.Location = New System.Drawing.Point(25, 44)
-        Me.databarang.Name = "databarang"
-        Me.databarang.Size = New System.Drawing.Size(696, 104)
-        Me.databarang.TabIndex = 5
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
+        Me.tbnotrans.Location = New System.Drawing.Point(118, 26)
+        Me.tbnotrans.Name = "tbnotrans"
+        Me.tbnotrans.Size = New System.Drawing.Size(100, 20)
+        Me.tbnotrans.TabIndex = 1
         '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 608)
+        Me.ClientSize = New System.Drawing.Size(792, 680)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.GroupBox1)
@@ -495,7 +606,6 @@ Partial Class Transaksi
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lbtanggal As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents lbnotransaksi As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
@@ -516,13 +626,23 @@ Partial Class Transaksi
     Friend WithEvents datadibeli As System.Windows.Forms.DataGridView
     Friend WithEvents databarang As System.Windows.Forms.DataGridView
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents lbtotalitem As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents btnsimpan As System.Windows.Forms.Button
+    Friend WithEvents btnbersih As System.Windows.Forms.Button
+    Friend WithEvents tbjumlah As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents lbhargabarang As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents lbnamabarang As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents lbidbarang As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents btninput As System.Windows.Forms.Button
     Friend WithEvents idbarang As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents nama As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents harga As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents jumlah As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents total As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents lbtotalitem As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents btnsimpan As System.Windows.Forms.Button
-    Friend WithEvents btnbersih As System.Windows.Forms.Button
+    Friend WithEvents tbnotrans As System.Windows.Forms.TextBox
 End Class
