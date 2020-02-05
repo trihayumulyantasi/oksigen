@@ -63,7 +63,6 @@ Public Class Transaksi
             databarang.Columns(5).HeaderText = "Nama Supplier"
             databarang.Columns(6).HeaderText = "Waktu Input"
             databarang.Columns(7).HeaderText = "Nama Admin"
-
         Else
             databarang.DataSource = Nothing
         End If
@@ -152,20 +151,21 @@ Public Class Transaksi
         If e.KeyChar = Chr(27) Then
             Dim yakinhapus As MsgBoxResult = MessageBox.Show("Yakin mau dihapus", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If yakinhapus = vbYes Then
-                datadibeli.Rows.Remove(datadibeli.CurrentRow)
+
                 For baris As Integer = 0 To datadibeli.RowCount - 1
                     Dim qUpdate As String
-                    qUpdate = "update barang set stock = stock + '" & datadibeli.Rows(baris).Cells(3).Value & "' where id_barang='" & datadibeli.Rows(baris).Cells(0).Value & "'"
+                    qUpdate = "update barang set stock = stock + '" & datadibeli.Rows(baris).Cells(3).Value & "' where id_barang ='" & datadibeli.Rows(baris).Cells(0).Value & "'"
                     CMD.CommandType = CommandType.Text
                     CMD.CommandText = qUpdate
                     CMD.Connection = conn
                     CMD.ExecuteNonQuery()
                     tampildata()
+
+                    Call totalitem()
+                    Call totalbayar()
                 Next
-                
+                datadibeli.Rows.Remove(datadibeli.CurrentRow)
             End If
-            Call totalitem()
-            Call totalbayar()
         End If
     End Sub
 
@@ -238,7 +238,7 @@ Public Class Transaksi
                 CMD.CommandText = qinsert
                 CMD.Connection = conn
                 CMD.ExecuteNonQuery()
-
+                MsgBox("Transaksi Tersimpan")
                 tampildata()
             Catch ex As Exception
                 MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
