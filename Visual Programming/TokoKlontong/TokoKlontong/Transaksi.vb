@@ -87,11 +87,10 @@ Public Class Transaksi
             KoneksiBuka()
             CMD = New MySqlCommand
             CMD.Connection = conn
-            str = "select * from transaksi where id_transaksi in(select max(id_transaksi) from transaksi) order by id_transaksi DESC"
+            str = "select * from transaksi where id_transaksi in (select max(id_transaksi) from transaksi) order by id_transaksi DESC"
             CMD.CommandText = str
             MySQLReader = CMD.ExecuteReader
             MySQLReader.Read()
-
             If Not MySQLReader.HasRows Then
                 tbnotrans.Text = Format(Now, "yyMMdd") + "0001"
             Else
@@ -99,11 +98,10 @@ Public Class Transaksi
                     tbnotrans.Text = Format(Now, "yyMMdd") + "0001"
                 Else
                     tbnotrans.Text = MySQLReader.Item("id_transaksi") + 1
-
                 End If
             End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -155,6 +153,16 @@ Public Class Transaksi
             Dim yakinhapus As MsgBoxResult = MessageBox.Show("Yakin mau dihapus", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If yakinhapus = vbYes Then
                 datadibeli.Rows.Remove(datadibeli.CurrentRow)
+                For baris As Integer = 0 To datadibeli.RowCount - 1
+                    Dim qUpdate As String
+                    qUpdate = "update barang set stock = stock + '" & datadibeli.Rows(baris).Cells(3).Value & "' where id_barang='" & datadibeli.Rows(baris).Cells(0).Value & "'"
+                    CMD.CommandType = CommandType.Text
+                    CMD.CommandText = qUpdate
+                    CMD.Connection = conn
+                    CMD.ExecuteNonQuery()
+                    tampildata()
+                Next
+                
             End If
             Call totalitem()
             Call totalbayar()
@@ -212,30 +220,38 @@ Public Class Transaksi
         statusbersih()
         datadibeli.Rows.Clear()
         tbnotrans.Text = ""
+        nofaktur()
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
         If (conn.State) <> ConnectionState.Closed Then conn.Close()
         KoneksiBuka()
-        Try
-            Dim qinsert As String
-            CMD.CommandType = CommandType.Text
-            qinsert = "insert into transaksi(id_transaksi, tanggal, waktu, total_item, diskon, total_harga, pembayaran, kembalian)"
-            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbtotalitem.Text & "', '" & tbdiskon.Text & "', '" & lbtotalbayar.Text & "', '" & tbpembayaran.Text & "', '" & lbkembalian.Text & "')"
-            CMD.CommandType = CommandType.Text
-            CMD.CommandText = qinsert
-            CMD.Connection = conn
-            CMD.ExecuteNonQuery()
+        If tbpembayaran.Text = "" Then
+            MsgBox("lakukan pembayaran terlebih dahulu")
+        Else
+            Try
+                Dim qinsert As String
+                CMD.CommandType = CommandType.Text
+                qinsert = "insert into transaksi(id_transaksi, tanggal, waktu, total_item, diskon, total_harga, pembayaran, kembalian)"
+                qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbtotalitem.Text & "', '" & tbdiskon.Text & "', '" & lbtotalbayar.Text & "', '" & tbpembayaran.Text & "', '" & lbkembalian.Text & "')"
+                CMD.CommandType = CommandType.Text
+                CMD.CommandText = qinsert
+                CMD.Connection = conn
+                CMD.ExecuteNonQuery()
 
-            tampildata()
-        Catch ex As Exception
-            MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
+                tampildata()
+            Catch ex As Exception
+                MsgBox("Gagal Simpan " + ex.Message, MsgBoxStyle.Critical, "Terjadi Kesalahan")
 
-        End Try
+            End Try
+        End If
+        
     End Sub
     Private Sub btninput_Click(sender As Object, e As EventArgs) Handles btninput.Click
-        If tbjumlah.Text = "" Then
-            MsgBox("Masukkan jumlah barang terlebih dahulu")
+        If (conn.State) <> ConnectionState.Closed Then conn.Close()
+        KoneksiBuka()
+        If tbjumlah.Text = "" Or lbidbarang.Text = "" Then
+            MsgBox("Masukkan ID barang atau jumlah barang terlebih dahulu")
             tbjumlah.Focus()
         Else
             Dim harga As Integer
@@ -245,7 +261,7 @@ Public Class Transaksi
             Try
                 Dim qinsert As String
                 CMD.CommandType = CommandType.Text
-                qinsert = "insert into detail_transaksi(id_detailtrans, tanggal, waktu, nama_barang, harga_barang, jumlah)"
+                qinsert = "insert into detail_transaksi(id_transaksi, tanggal, waktu, nama_barang, harga_barang, jumlah)"
                 qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
                 CMD.CommandType = CommandType.Text
                 CMD.CommandText = qinsert
@@ -254,6 +270,14 @@ Public Class Transaksi
             Catch ex As Exception
 
             End Try
+
+            Dim qUpdate As String
+            qUpdate = "update barang set stock = stock - '" & tbjumlah.Text & "' where id_barang='" & lbidbarang.Text & "'"
+            CMD.CommandType = CommandType.Text
+            CMD.CommandText = qUpdate
+            CMD.Connection = conn
+            CMD.ExecuteNonQuery()
+            tampildata()
         End If
         
         lbidbarang.Text = ""
