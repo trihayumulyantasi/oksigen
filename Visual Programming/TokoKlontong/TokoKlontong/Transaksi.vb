@@ -234,31 +234,33 @@ Public Class Transaksi
         End Try
     End Sub
     Private Sub btninput_Click(sender As Object, e As EventArgs) Handles btninput.Click
-        Dim harga As Integer
-        harga = Val(lbhargabarang.Text) * Val(tbjumlah.Text)
-        datadibeli.Rows.Add(New String() {lbidbarang.Text, lbnamabarang.Text, lbhargabarang.Text, tbjumlah.Text, harga})
+        If tbjumlah.Text = "" Then
+            MsgBox("Masukkan jumlah barang terlebih dahulu")
+            tbjumlah.Focus()
+        Else
+            Dim harga As Integer
+            harga = Val(lbhargabarang.Text) * Val(tbjumlah.Text)
+            datadibeli.Rows.Add(New String() {lbidbarang.Text, lbnamabarang.Text, lbhargabarang.Text, tbjumlah.Text, harga})
 
-        Try
-            Dim qinsert As String
-            CMD.CommandType = CommandType.Text
-            qinsert = "insert into detail_transaksi(id_detailtrans, tanggal, waktu, nama_barang, harga_barang, jumlah)"
-            qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
-            CMD.CommandType = CommandType.Text
-            CMD.CommandText = qinsert
-            CMD.Connection = conn
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
+            Try
+                Dim qinsert As String
+                CMD.CommandType = CommandType.Text
+                qinsert = "insert into detail_transaksi(id_detailtrans, tanggal, waktu, nama_barang, harga_barang, jumlah)"
+                qinsert = qinsert & "values('" & tbnotrans.Text & "', '" & lbtanggal.Text & "', '" & lbjam.Text & "', '" & lbnamabarang.Text & "', '" & lbhargabarang.Text & "', '" & tbjumlah.Text & "')"
+                CMD.CommandType = CommandType.Text
+                CMD.CommandText = qinsert
+                CMD.Connection = conn
+                CMD.ExecuteNonQuery()
+            Catch ex As Exception
 
-        End Try
+            End Try
+        End If
+        
         lbidbarang.Text = ""
         lbnamabarang.Text = ""
         lbhargabarang.Text = ""
         tbjumlah.Text = ""
         Call totalbayar()
         Call totalitem()
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
     End Sub
 End Class
