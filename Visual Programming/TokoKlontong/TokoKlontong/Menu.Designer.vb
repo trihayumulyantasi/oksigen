@@ -34,12 +34,11 @@ Partial Class Menuaja
         Me.btnsupplier = New System.Windows.Forms.Button()
         Me.btnlapsupplier = New System.Windows.Forms.Button()
         Me.btntransaksi = New System.Windows.Forms.Button()
-        Me.btnclosing = New System.Windows.Forms.Button()
         Me.btnlapbulanan = New System.Windows.Forms.Button()
-        Me.btnresi = New System.Windows.Forms.Button()
         Me.btntentang = New System.Windows.Forms.Button()
         Me.btnpanduan = New System.Windows.Forms.Button()
         Me.btnlogout = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -182,18 +181,6 @@ Partial Class Menuaja
         Me.btntransaksi.Text = "&Transaksi"
         Me.btntransaksi.UseVisualStyleBackColor = False
         '
-        'btnclosing
-        '
-        Me.btnclosing.BackColor = System.Drawing.Color.PowderBlue
-        Me.btnclosing.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnclosing.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclosing.Location = New System.Drawing.Point(247, 162)
-        Me.btnclosing.Name = "btnclosing"
-        Me.btnclosing.Size = New System.Drawing.Size(95, 48)
-        Me.btnclosing.TabIndex = 12
-        Me.btnclosing.Text = "&Closing"
-        Me.btnclosing.UseVisualStyleBackColor = False
-        '
         'btnlapbulanan
         '
         Me.btnlapbulanan.BackColor = System.Drawing.Color.PowderBlue
@@ -203,20 +190,8 @@ Partial Class Menuaja
         Me.btnlapbulanan.Name = "btnlapbulanan"
         Me.btnlapbulanan.Size = New System.Drawing.Size(95, 48)
         Me.btnlapbulanan.TabIndex = 13
-        Me.btnlapbulanan.Text = "Laporan Bulanan"
+        Me.btnlapbulanan.Text = "Resi"
         Me.btnlapbulanan.UseVisualStyleBackColor = False
-        '
-        'btnresi
-        '
-        Me.btnresi.BackColor = System.Drawing.Color.PowderBlue
-        Me.btnresi.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnresi.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnresi.Location = New System.Drawing.Point(423, 162)
-        Me.btnresi.Name = "btnresi"
-        Me.btnresi.Size = New System.Drawing.Size(95, 48)
-        Me.btnresi.TabIndex = 14
-        Me.btnresi.Text = "&Resi"
-        Me.btnresi.UseVisualStyleBackColor = False
         '
         'btntentang
         '
@@ -254,18 +229,29 @@ Partial Class Menuaja
         Me.btnlogout.Text = "LO&GOUT"
         Me.btnlogout.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.PowderBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(424, 162)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(95, 48)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Laporan Bulanan"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Menuaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(762, 378)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnlogout)
         Me.Controls.Add(Me.btnpanduan)
         Me.Controls.Add(Me.btntentang)
-        Me.Controls.Add(Me.btnresi)
         Me.Controls.Add(Me.btnlapbulanan)
-        Me.Controls.Add(Me.btnclosing)
         Me.Controls.Add(Me.btntransaksi)
         Me.Controls.Add(Me.btnlapsupplier)
         Me.Controls.Add(Me.btnsupplier)
@@ -298,10 +284,9 @@ Partial Class Menuaja
     Friend WithEvents btnsupplier As System.Windows.Forms.Button
     Friend WithEvents btnlapsupplier As System.Windows.Forms.Button
     Friend WithEvents btntransaksi As System.Windows.Forms.Button
-    Friend WithEvents btnclosing As System.Windows.Forms.Button
     Friend WithEvents btnlapbulanan As System.Windows.Forms.Button
-    Friend WithEvents btnresi As System.Windows.Forms.Button
     Friend WithEvents btntentang As System.Windows.Forms.Button
     Friend WithEvents btnpanduan As System.Windows.Forms.Button
     Friend WithEvents btnlogout As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

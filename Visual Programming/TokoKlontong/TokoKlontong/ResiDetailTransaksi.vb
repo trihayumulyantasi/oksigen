@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class CetakResi
+Public Class ResiDetailTransaksi
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class CetakResi
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "CetakResi.rpt"
+            Return "ResiDetailTransaksi.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class CetakResi
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "TokoKlontong.CetakResi.rpt"
+            Return "TokoKlontong.ResiDetailTransaksi.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class CetakResi
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedCetakResi
+Public Class CachedResiDetailTransaksi
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class CachedCetakResi
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As CetakResi = New CetakResi()
+        Dim rpt As ResiDetailTransaksi = New ResiDetailTransaksi()
         rpt.Site = Me.Site
         Return rpt
     End Function

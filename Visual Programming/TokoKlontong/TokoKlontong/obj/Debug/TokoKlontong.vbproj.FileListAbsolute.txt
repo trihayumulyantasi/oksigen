@@ -45,3 +45,10 @@ D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\Tok
 D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Transaksi.resources
 D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.vbprojResolveAssemblyReference.cache
 D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.LaporanTransaksi.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\Interop.CrystalActiveXReportViewerLib13.dll
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.vbproj.ResolveComReference.cache
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\Interop.CrystalActiveXReportViewerLib13.dll
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\bin\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.lpp.resources
+D:\TECHNOLOGY INFORMATION\DESIGN ANALYSIS\oksigen\oksigen\Visual Programming\TokoKlontong\TokoKlontong\obj\Debug\TokoKlontong.Form1.resources
