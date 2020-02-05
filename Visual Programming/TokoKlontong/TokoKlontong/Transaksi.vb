@@ -109,7 +109,7 @@ Public Class Transaksi
         lbidbarang.Text = databarang.Rows(e.RowIndex).Cells(0).Value
         lbnamabarang.Text = databarang.Rows(e.RowIndex).Cells(1).Value
         lbhargabarang.Text = databarang.Rows(e.RowIndex).Cells(2).Value
-
+        tbjumlah.Focus()
         For i As Integer = 0 To datadibeli.RowCount - 1
             For j As Integer = i + 1 To datadibeli.RowCount - 1
                 If datadibeli.Rows(i).Cells(0).Value = datadibeli.Rows(j).Cells(0).Value Then
@@ -286,5 +286,12 @@ Public Class Transaksi
         tbjumlah.Text = ""
         Call totalbayar()
         Call totalitem()
+    End Sub
+
+    Private Sub tbjumlah_TextChanged(sender As Object, e As EventArgs) Handles tbjumlah.TextChanged
+        If Not (tbjumlah.Text >= "0" And tbjumlah.Text <= "9" Or tbjumlah.Text = vbBack Or tbjumlah.Text = "") Then
+            MsgBox("Masukkan angka saja")
+            tbjumlah.Clear()
+        End If
     End Sub
 End Class
